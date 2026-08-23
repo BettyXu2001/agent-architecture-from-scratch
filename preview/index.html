@@ -1,0 +1,970 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Agent Architecture from Scratch</title>
+    <style>
+      :root {
+        --bg: #f4efe7;
+        --panel: rgba(255, 252, 246, 0.9);
+        --panel-strong: rgba(255, 255, 255, 0.92);
+        --ink: #1f1a17;
+        --muted: #665b54;
+        --line: rgba(31, 26, 23, 0.12);
+        --brand: #bf4f2f;
+        --brand-2: #1f6b5c;
+        --shadow: 0 18px 60px rgba(79, 55, 34, 0.14);
+        --mono: "Courier New", monospace;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        color: var(--ink);
+        font-family: Georgia, "Times New Roman", serif;
+        background:
+          radial-gradient(circle at top left, rgba(191, 79, 47, 0.16), transparent 28%),
+          radial-gradient(circle at top right, rgba(31, 107, 92, 0.18), transparent 30%),
+          linear-gradient(180deg, #fbf7f1 0%, var(--bg) 100%);
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .topbar {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        backdrop-filter: blur(16px);
+        background: rgba(251, 247, 241, 0.82);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .topbar-inner {
+        width: min(1380px, calc(100% - 32px));
+        margin: 0 auto;
+        min-height: 62px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .brand-mark {
+        width: 32px;
+        height: 32px;
+        border-radius: 8px;
+        background:
+          linear-gradient(135deg, rgba(191, 79, 47, 0.9), rgba(31, 107, 92, 0.9));
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.35);
+      }
+
+      .brand-copy strong {
+        display: block;
+        font: 700 15px/1.2 Arial, sans-serif;
+      }
+
+      .brand-copy span {
+        display: block;
+        color: var(--muted);
+        font: 500 12px/1.3 Arial, sans-serif;
+      }
+
+      .topbar-actions {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .lang-switch {
+        display: inline-flex;
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.8);
+      }
+
+      .lang-switch button {
+        border: 0;
+        background: transparent;
+        color: var(--muted);
+        padding: 9px 14px;
+        font: 600 13px/1 Arial, sans-serif;
+        cursor: pointer;
+      }
+
+      .lang-switch button.active {
+        background: var(--ink);
+        color: white;
+      }
+
+      .status-pill {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 8px 12px;
+        font: 600 12px/1 Arial, sans-serif;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.7);
+      }
+
+      .shell {
+        width: min(1380px, calc(100% - 32px));
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 280px minmax(0, 1fr) 220px;
+        gap: 24px;
+        padding: 24px 0 40px;
+      }
+
+      .sidebar,
+      .toc {
+        position: sticky;
+        top: 86px;
+        align-self: start;
+        max-height: calc(100vh - 110px);
+        overflow: auto;
+        padding: 18px;
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel);
+        box-shadow: var(--shadow);
+      }
+
+      .sidebar h2,
+      .toc h2,
+      .content-head .eyebrow {
+        margin: 0 0 12px;
+        color: var(--muted);
+        font: 700 12px/1.2 Arial, sans-serif;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+
+      .nav-group {
+        margin-bottom: 20px;
+      }
+
+      .nav-group-title {
+        margin: 0 0 8px;
+        color: var(--muted);
+        font: 700 13px/1.3 Arial, sans-serif;
+      }
+
+      .sidebar a {
+        display: block;
+        padding: 10px 12px;
+        margin-bottom: 6px;
+        border-left: 2px solid transparent;
+        border-radius: 0 8px 8px 0;
+        text-decoration: none;
+        color: var(--ink);
+        font-size: 15px;
+        line-height: 1.45;
+      }
+
+      .sidebar a.active,
+      .sidebar a:hover {
+        background: rgba(255, 255, 255, 0.75);
+        border-left-color: var(--brand);
+      }
+
+      .content {
+        min-width: 0;
+      }
+
+      .article {
+        padding: 8px 4px 0;
+      }
+
+      .content-head {
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--line);
+        margin-bottom: 22px;
+      }
+
+      .content-head h1 {
+        margin: 0 0 10px;
+        font-size: clamp(34px, 4vw, 52px);
+        line-height: 1.02;
+      }
+
+      .article-meta {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .meta-chip {
+        border: 1px solid var(--line);
+        border-radius: 999px;
+        padding: 7px 10px;
+        font: 600 12px/1 Arial, sans-serif;
+        color: var(--muted);
+        background: rgba(255, 255, 255, 0.72);
+      }
+
+      .content-body {
+        font-size: 17px;
+        line-height: 1.85;
+        color: #2c2521;
+      }
+
+      .content-body p,
+      .content-body ul,
+      .content-body ol,
+      .content-body pre,
+      .content-body table,
+      .content-body blockquote {
+        margin: 0 0 18px;
+      }
+
+      .content-body h2 {
+        margin: 34px 0 12px;
+        font-size: 28px;
+        line-height: 1.12;
+        scroll-margin-top: 88px;
+      }
+
+      .content-body h3 {
+        margin: 26px 0 10px;
+        font-size: 21px;
+        line-height: 1.2;
+        scroll-margin-top: 88px;
+      }
+
+      .content-body code {
+        padding: 1px 5px;
+        border-radius: 4px;
+        background: rgba(31, 26, 23, 0.07);
+        font-family: var(--mono);
+        font-size: 0.92em;
+      }
+
+      .content-body pre {
+        overflow: auto;
+        padding: 16px;
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        background: #1d1a18;
+        color: #f5efe8;
+      }
+
+      .content-body pre code {
+        padding: 0;
+        background: transparent;
+        color: inherit;
+      }
+
+      .content-body ul,
+      .content-body ol {
+        padding-left: 22px;
+      }
+
+      .lead-note,
+      .doc-card,
+      .tip-box {
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        background: var(--panel-strong);
+        box-shadow: var(--shadow);
+      }
+
+      .lead-note {
+        padding: 18px 20px;
+        margin-bottom: 22px;
+      }
+
+      .lead-note strong {
+        display: block;
+        margin-bottom: 6px;
+        font: 700 14px/1.3 Arial, sans-serif;
+      }
+
+      .doc-grid {
+        display: grid;
+        gap: 14px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        margin: 0 0 22px;
+      }
+
+      .doc-card {
+        padding: 16px;
+      }
+
+      .doc-card h3 {
+        margin-top: 0;
+      }
+
+      .doc-card p:last-child {
+        margin-bottom: 0;
+      }
+
+      .tip-box {
+        padding: 16px 18px;
+        margin: 20px 0;
+        border-left: 4px solid var(--brand-2);
+      }
+
+      .tip-box strong {
+        display: block;
+        margin-bottom: 6px;
+        font: 700 14px/1.3 Arial, sans-serif;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.75);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        overflow: hidden;
+      }
+
+      thead th {
+        text-align: left;
+        padding: 12px 14px;
+        background: rgba(31, 26, 23, 0.05);
+        border-bottom: 1px solid var(--line);
+        font: 700 13px/1.3 Arial, sans-serif;
+      }
+
+      tbody td {
+        vertical-align: top;
+        padding: 12px 14px;
+        border-top: 1px solid var(--line);
+      }
+
+      .toc a {
+        display: block;
+        padding: 7px 0 7px 12px;
+        color: var(--muted);
+        text-decoration: none;
+        border-left: 2px solid transparent;
+        font: 500 14px/1.4 Arial, sans-serif;
+      }
+
+      .toc a.active,
+      .toc a:hover {
+        color: var(--ink);
+        border-left-color: var(--brand);
+      }
+
+      .toc .toc-level-3 {
+        padding-left: 20px;
+        font-size: 13px;
+      }
+
+      .footer {
+        margin-top: 32px;
+        padding-top: 16px;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        font: 500 13px/1.6 Arial, sans-serif;
+      }
+
+      @media (max-width: 1180px) {
+        .shell {
+          grid-template-columns: 250px minmax(0, 1fr);
+        }
+
+        .toc {
+          display: none;
+        }
+      }
+
+      @media (max-width: 860px) {
+        .topbar-inner,
+        .shell {
+          width: min(100%, calc(100% - 20px));
+        }
+
+        .shell {
+          grid-template-columns: 1fr;
+          gap: 16px;
+        }
+
+        .sidebar,
+        .toc {
+          position: static;
+          max-height: none;
+        }
+
+        .doc-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar-inner {
+          flex-wrap: wrap;
+          padding: 10px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="topbar-inner">
+        <div class="brand">
+          <div class="brand-mark"></div>
+          <div class="brand-copy">
+            <strong>Agent Architecture from Scratch</strong>
+            <span>双语教程站结构预览</span>
+          </div>
+        </div>
+        <div class="topbar-actions">
+          <div class="lang-switch">
+            <button id="lang-zh" class="active" type="button">中文</button>
+            <button id="lang-en" type="button">English</button>
+          </div>
+          <div class="status-pill" id="status-pill">中文主内容</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="sidebar">
+        <h2>Navigation</h2>
+        <div id="nav"></div>
+      </aside>
+
+      <section class="content">
+        <article class="article">
+          <div class="content-head">
+            <div class="eyebrow" id="article-eyebrow">Getting Started</div>
+            <h1 id="article-title"></h1>
+            <div class="article-meta" id="article-meta"></div>
+          </div>
+          <div class="content-body" id="article-body"></div>
+          <div class="footer">当前是结构预览页，重点用来验证教程网站的信息组织方式。</div>
+        </article>
+      </section>
+
+      <aside class="toc">
+        <h2>On This Page</h2>
+        <nav id="toc"></nav>
+      </aside>
+    </main>
+
+    <script>
+      const pages = {
+        zh: [
+          {
+            id: "home",
+            section: "快速开始",
+            label: "概览",
+            eyebrow: "Getting Started",
+            title: "Agent 架构从零开始",
+            meta: ["中文主内容", "教程站结构预览", "面向工程师"],
+            toc: [
+              { id: "what", label: "这套教程解决什么问题", level: 2 },
+              { id: "path", label: "学习路径", level: 2 },
+              { id: "who", label: "适合谁看", level: 2 }
+            ],
+            body: `
+              <div class="lead-note">
+                <strong>概览</strong>
+                这套教程不是从框架 API 开始，而是从 Agent Harness 开始。重点是把模型输出、工具执行、上下文更新、记忆、规划和多 Agent 协作拆成可理解、可运行、可演进的结构。
+              </div>
+
+              <p>很多 Agent 教程直接进入框架和模板代码，这样上手快，但经常把真正重要的控制流藏起来。这个教程站会更像工程文档：先说明问题，再给出建议阅读路径，最后对应到可运行示例。</p>
+
+              <h2 id="what">这套教程解决什么问题</h2>
+              <p>如果你已经会调用模型 API，但还不清楚 Agent 为什么需要循环、工具、上下文和运行时，那么这里就是主入口。</p>
+              <pre><code>Agent System = Model + Harness
+Harness = Loop + Tools + Context + Memory + Runtime + Safety + Orchestration</code></pre>
+
+              <div class="doc-grid">
+                <section class="doc-card">
+                  <h3>想先理解控制流</h3>
+                  <p>先看基础 Agent 循环，理解为什么 Agent 不是一次性回答，而是“模型决策 + Harness 执行”的闭环。</p>
+                </section>
+                <section class="doc-card">
+                  <h3>想尽快上手项目结构</h3>
+                  <p>先看章节索引和示例代码目录，再回来看每一章的设计原则，这样学习路径会更稳。</p>
+                </section>
+              </div>
+
+              <h2 id="path">学习路径</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>场景</th>
+                    <th>建议先读</th>
+                    <th>你会得到什么</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>第一次接触 Agent</td>
+                    <td>01 - 基础 Agent 循环</td>
+                    <td>理解模型、工具、观察结果、停止条件的最小闭环。</td>
+                  </tr>
+                  <tr>
+                    <td>想做更真实的工具调用</td>
+                    <td>02 - 工具调用 Agent</td>
+                    <td>理解 schema、参数校验、工具注册表和错误处理。</td>
+                  </tr>
+                  <tr>
+                    <td>想让 Agent 拆任务</td>
+                    <td>04 - 计划与执行</td>
+                    <td>理解 planner、executor 和最终汇总之间的职责边界。</td>
+                  </tr>
+                  <tr>
+                    <td>想理解系统级设计</td>
+                    <td>07 - Agent Harness</td>
+                    <td>理解运行时、上下文、检查点、重试和安全边界。</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="tip-box">
+                <strong>阅读建议</strong>
+                先按章节顺序建立整体模型，再回头挑一个你最关心的能力，比如工具调用、规划或记忆，单独往深了读。
+              </div>
+
+              <h2 id="who">适合谁看</h2>
+              <ul>
+                <li>想知道编码 Agent、研究 Agent、浏览器 Agent 为什么能持续行动的工程师。</li>
+                <li>已经在用框架，但想补上底层控制流认知的团队。</li>
+                <li>需要把单次问答系统扩展成任务执行系统的开发者。</li>
+              </ul>
+            `
+          },
+          {
+            id: "basic-loop",
+            section: "第一章",
+            label: "01 - 基础 Agent 循环",
+            eyebrow: "Chapter 01",
+            title: "01 - 基础 Agent 循环",
+            meta: ["中文主内容", "最小可运行示例", "examples/01-basic-agent-loop"],
+            toc: [
+              { id: "definition", label: "它是什么", level: 2 },
+              { id: "roles", label: "关键角色", level: 2 },
+              { id: "flow", label: "控制流", level: 2 },
+              { id: "mapping", label: "生产系统里的对应关系", level: 2 }
+            ],
+            body: `
+              <div class="lead-note">
+                <strong>本章目标</strong>
+                搞清楚 Agent 为什么需要循环，以及模型和 Harness 的职责为什么必须分开。
+              </div>
+
+              <h2 id="definition">它是什么</h2>
+              <p>基础 Agent 循环是最小可用的 Agent Harness。它负责把用户输入交给模型，判断模型要不要调用工具，把工具结果写回上下文，然后继续让模型生成下一步。</p>
+              <pre><code>model -&gt; tool call -&gt; tool result -&gt; updated context -&gt; model -&gt; final answer</code></pre>
+              <p>这个例子故意不接真实 LLM API，而是使用 <code>ScriptedModel</code> 模拟一个确定性的模型。这样你可以先专注理解架构，而不是被接入细节打断。</p>
+
+              <h2 id="roles">关键角色</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>组件</th>
+                    <th>职责</th>
+                    <th>为什么重要</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Message</code></td>
+                    <td>保存上下文消息</td>
+                    <td>让模型能看到用户输入和工具观察结果。</td>
+                  </tr>
+                  <tr>
+                    <td><code>ToolCall</code></td>
+                    <td>表达模型的动作意图</td>
+                    <td>把“决策”与“执行”拆开。</td>
+                  </tr>
+                  <tr>
+                    <td><code>calculator</code></td>
+                    <td>执行具体工具逻辑</td>
+                    <td>说明工具只负责动作，不负责流程。</td>
+                  </tr>
+                  <tr>
+                    <td><code>run_agent</code></td>
+                    <td>管理循环和停止条件</td>
+                    <td>它就是最小 Harness。</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2 id="flow">控制流</h2>
+              <div class="doc-grid">
+                <section class="doc-card">
+                  <h3>模型只做判断</h3>
+                  <p>模型不直接执行工具，它只返回结构化意图，比如调用 <code>calculator</code> 并传入表达式。</p>
+                </section>
+                <section class="doc-card">
+                  <h3>Harness 负责执行</h3>
+                  <p><code>run_agent</code> 检查工具是否存在、调用工具、记录结果，再把结果写回上下文。</p>
+                </section>
+                <section class="doc-card">
+                  <h3>观察结果驱动下一步</h3>
+                  <p>第一次得到 <code>84</code> 之后，模型根据这个观察结果继续请求 <code>84 + 6</code>。</p>
+                </section>
+                <section class="doc-card">
+                  <h3>循环必须可停</h3>
+                  <p>这个示例同时用 <code>FinalAnswer</code> 和 <code>max_steps</code> 避免无限循环。</p>
+                </section>
+              </div>
+
+              <h3>运行示例</h3>
+              <pre><code>python examples/01-basic-agent-loop/basic_agent_loop.py</code></pre>
+
+              <div class="tip-box">
+                <strong>看代码时重点关注</strong>
+                把代码按“模型层”和“Harness 层”分开看，不要把工具函数误认为 Agent 本身。
+              </div>
+
+              <h2 id="mapping">生产系统里的对应关系</h2>
+              <p>真实 Agent 系统通常会把 <code>ScriptedModel</code> 换成 LLM API，把 <code>calculator</code> 扩展成多个工具，把 <code>messages</code> 接入上下文管理和追踪系统。但核心控制流并不会变：</p>
+              <ol>
+                <li>准备上下文。</li>
+                <li>调用模型。</li>
+                <li>如果模型返回最终答案，结束。</li>
+                <li>如果模型请求工具，执行工具。</li>
+                <li>把工具结果写回上下文。</li>
+                <li>回到模型继续生成。</li>
+              </ol>
+            `
+          }
+        ],
+        en: [
+          {
+            id: "home",
+            section: "Getting Started",
+            label: "Overview",
+            eyebrow: "Getting Started",
+            title: "Agent Architecture from Scratch",
+            meta: ["English mirror", "Structure preview", "For engineers"],
+            toc: [
+              { id: "what", label: "What this tutorial solves", level: 2 },
+              { id: "path", label: "Learning path", level: 2 },
+              { id: "who", label: "Who this is for", level: 2 }
+            ],
+            body: `
+              <div class="lead-note">
+                <strong>Overview</strong>
+                This tutorial does not start with framework APIs. It starts with the Agent Harness: model output, tool execution, context updates, memory, planning, and multi-agent collaboration.
+              </div>
+
+              <p>Many agent tutorials jump directly into framework code. That is fast to start, but it tends to hide the actual control flow. This preview uses a documentation-style structure: explain the problem first, suggest a reading path, then map it to runnable examples.</p>
+
+              <h2 id="what">What this tutorial solves</h2>
+              <p>If you already know how to call a model API but still do not have a clear mental model for loops, tools, context, and runtime behavior, this is the right entry point.</p>
+              <pre><code>Agent System = Model + Harness
+Harness = Loop + Tools + Context + Memory + Runtime + Safety + Orchestration</code></pre>
+
+              <div class="doc-grid">
+                <section class="doc-card">
+                  <h3>Need the control flow first</h3>
+                  <p>Start with the basic agent loop to understand why an agent is not a one-shot answer, but a loop between model decisions and Harness execution.</p>
+                </section>
+                <section class="doc-card">
+                  <h3>Need the project shape first</h3>
+                  <p>Start with the chapter index and example directories, then come back to the design principles after you have the map in your head.</p>
+                </section>
+              </div>
+
+              <h2 id="path">Learning path</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Situation</th>
+                    <th>Start here</th>
+                    <th>What you get</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>First time learning agents</td>
+                    <td>01 - Basic Agent Loop</td>
+                    <td>Understand the minimal loop around model output, tools, observations, and stop conditions.</td>
+                  </tr>
+                  <tr>
+                    <td>Need real tool calling</td>
+                    <td>02 - Tool-Calling Agent</td>
+                    <td>Understand schemas, validation, tool registries, and failure handling.</td>
+                  </tr>
+                  <tr>
+                    <td>Need task decomposition</td>
+                    <td>04 - Plan and Execute</td>
+                    <td>Understand the separation between planner, executor, and synthesis.</td>
+                  </tr>
+                  <tr>
+                    <td>Need system-level design</td>
+                    <td>07 - Agent Harness</td>
+                    <td>Understand runtime behavior, checkpoints, retries, and safety boundaries.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="tip-box">
+                <strong>Reading advice</strong>
+                Build the overall model first in chapter order, then go deeper on the specific capability you care about most, such as tool calling, planning, or memory.
+              </div>
+
+              <h2 id="who">Who this is for</h2>
+              <ul>
+                <li>Engineers who want to understand why coding, research, or browser agents can keep acting over time.</li>
+                <li>Teams already using frameworks but missing the underlying control flow model.</li>
+                <li>Developers expanding a single-turn assistant into a task-execution system.</li>
+              </ul>
+            `
+          },
+          {
+            id: "basic-loop",
+            section: "Chapter 01",
+            label: "01 - Basic Agent Loop",
+            eyebrow: "Chapter 01",
+            title: "01 - Basic Agent Loop",
+            meta: ["English mirror", "Minimal runnable example", "examples/01-basic-agent-loop"],
+            toc: [
+              { id: "definition", label: "What it is", level: 2 },
+              { id: "roles", label: "Key roles", level: 2 },
+              { id: "flow", label: "Control flow", level: 2 },
+              { id: "mapping", label: "Production mapping", level: 2 }
+            ],
+            body: `
+              <div class="lead-note">
+                <strong>Goal of this chapter</strong>
+                Understand why an agent needs a loop and why model responsibilities must stay separate from Harness responsibilities.
+              </div>
+
+              <h2 id="definition">What it is</h2>
+              <p>The basic agent loop is the smallest useful Agent Harness. It sends user input to the model, checks whether the model wants to call a tool, writes the tool result back into context, and asks the model for the next step.</p>
+              <pre><code>model -&gt; tool call -&gt; tool result -&gt; updated context -&gt; model -&gt; final answer</code></pre>
+              <p>This example intentionally avoids a real LLM API and uses <code>ScriptedModel</code> as a deterministic stand-in so the architecture is easier to inspect.</p>
+
+              <h2 id="roles">Key roles</h2>
+              <table>
+                <thead>
+                  <tr>
+                    <th>Component</th>
+                    <th>Responsibility</th>
+                    <th>Why it matters</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><code>Message</code></td>
+                    <td>Stores context messages</td>
+                    <td>Lets the model see both user input and tool observations.</td>
+                  </tr>
+                  <tr>
+                    <td><code>ToolCall</code></td>
+                    <td>Represents model action intent</td>
+                    <td>Separates decision-making from execution.</td>
+                  </tr>
+                  <tr>
+                    <td><code>calculator</code></td>
+                    <td>Executes tool logic</td>
+                    <td>Shows that tools own actions, not control flow.</td>
+                  </tr>
+                  <tr>
+                    <td><code>run_agent</code></td>
+                    <td>Owns the loop and stop conditions</td>
+                    <td>It is the minimal Harness.</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h2 id="flow">Control flow</h2>
+              <div class="doc-grid">
+                <section class="doc-card">
+                  <h3>The model only decides</h3>
+                  <p>The model does not execute tools directly. It only returns structured intent, such as calling <code>calculator</code> with an expression.</p>
+                </section>
+                <section class="doc-card">
+                  <h3>The Harness executes</h3>
+                  <p><code>run_agent</code> checks whether the tool exists, calls it, records the result, and writes that result back into context.</p>
+                </section>
+                <section class="doc-card">
+                  <h3>Observations drive the next step</h3>
+                  <p>After the first result is <code>84</code>, the model sees that observation and requests <code>84 + 6</code>.</p>
+                </section>
+                <section class="doc-card">
+                  <h3>The loop must stop</h3>
+                  <p>This example uses both <code>FinalAnswer</code> and <code>max_steps</code> to avoid infinite loops.</p>
+                </section>
+              </div>
+
+              <h3>Run the example</h3>
+              <pre><code>python examples/01-basic-agent-loop/basic_agent_loop.py</code></pre>
+
+              <div class="tip-box">
+                <strong>What to look for in code</strong>
+                Read the code in two passes: first the model layer, then the Harness layer. Do not mistake a tool function for the agent itself.
+              </div>
+
+              <h2 id="mapping">Production mapping</h2>
+              <p>In a real agent system, <code>ScriptedModel</code> becomes an LLM API, <code>calculator</code> grows into multiple tools, and <code>messages</code> connect to context management and tracing. The core control flow stays the same:</p>
+              <ol>
+                <li>Prepare context.</li>
+                <li>Call the model.</li>
+                <li>If the model returns a final answer, stop.</li>
+                <li>If the model requests a tool, execute the tool.</li>
+                <li>Write the tool result back into context.</li>
+                <li>Return to the model and continue.</li>
+              </ol>
+            `
+          }
+        ]
+      };
+
+      let currentLang = "zh";
+      let currentPage = "home";
+
+      const nav = document.getElementById("nav");
+      const toc = document.getElementById("toc");
+      const title = document.getElementById("article-title");
+      const meta = document.getElementById("article-meta");
+      const body = document.getElementById("article-body");
+      const eyebrow = document.getElementById("article-eyebrow");
+      const statusPill = document.getElementById("status-pill");
+      const zhButton = document.getElementById("lang-zh");
+      const enButton = document.getElementById("lang-en");
+
+      function currentItems() {
+        return pages[currentLang];
+      }
+
+      function currentPageData() {
+        return currentItems().find((item) => item.id === currentPage) || currentItems()[0];
+      }
+
+      function renderNav() {
+        const groups = [];
+        for (const page of currentItems()) {
+          let group = groups.find((item) => item.name === page.section);
+          if (!group) {
+            group = { name: page.section, pages: [] };
+            groups.push(group);
+          }
+          group.pages.push(page);
+        }
+
+        nav.innerHTML = groups
+          .map(
+            (group) => `
+              <div class="nav-group">
+                <div class="nav-group-title">${group.name}</div>
+                ${group.pages
+                  .map(
+                    (page) => `
+                      <a href="#" data-page="${page.id}" class="${page.id === currentPage ? "active" : ""}">
+                        ${page.label}
+                      </a>
+                    `
+                  )
+                  .join("")}
+              </div>
+            `
+          )
+          .join("");
+
+        for (const link of nav.querySelectorAll("[data-page]")) {
+          link.addEventListener("click", function (event) {
+            event.preventDefault();
+            currentPage = link.getAttribute("data-page");
+            render();
+            window.scrollTo({ top: 0 });
+          });
+        }
+      }
+
+      function renderMeta(chips) {
+        meta.innerHTML = chips
+          .map((item) => `<span class="meta-chip">${item}</span>`)
+          .join("");
+      }
+
+      function renderToc(items) {
+        toc.innerHTML = items
+          .map(
+            (item) => `
+              <a href="#${item.id}" class="toc-level-${item.level}">${item.label}</a>
+            `
+          )
+          .join("");
+      }
+
+      function bindTocState() {
+        const links = Array.from(toc.querySelectorAll("a"));
+        if (!links.length) {
+          return;
+        }
+
+        const sections = links
+          .map((link) => {
+            const id = link.getAttribute("href").slice(1);
+            return { link, section: document.getElementById(id) };
+          })
+          .filter((item) => item.section);
+
+        function updateActive() {
+          let active = sections[0];
+          for (const item of sections) {
+            if (item.section.getBoundingClientRect().top <= 110) {
+              active = item;
+            }
+          }
+          for (const item of sections) {
+            item.link.classList.toggle("active", item === active);
+          }
+        }
+
+        window.addEventListener("scroll", updateActive, { passive: true });
+        updateActive();
+      }
+
+      function renderArticle() {
+        const page = currentPageData();
+        title.textContent = page.title;
+        eyebrow.textContent = page.eyebrow;
+        statusPill.textContent = currentLang === "zh" ? "中文主内容" : "English mirror";
+        renderMeta(page.meta);
+        body.innerHTML = page.body;
+        renderToc(page.toc);
+        bindTocState();
+      }
+
+      function render() {
+        zhButton.classList.toggle("active", currentLang === "zh");
+        enButton.classList.toggle("active", currentLang === "en");
+        renderNav();
+        renderArticle();
+      }
+
+      zhButton.addEventListener("click", function () {
+        currentLang = "zh";
+        currentPage = "home";
+        render();
+        window.scrollTo({ top: 0 });
+      });
+
+      enButton.addEventListener("click", function () {
+        currentLang = "en";
+        currentPage = "home";
+        render();
+        window.scrollTo({ top: 0 });
+      });
+
+      render();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+site_name: Agent Architecture from Scratch
+site_description: Bilingual tutorials for agent system architecture, from workflows to distributed multi-agent systems.
+docs_dir: docs
+theme:
+  name: material
+nav:
+  - 中文:
+      - 首页: zh/index.md
+      - OV01 - Agent System Architecture Map: zh/00-overview/agent-system-architecture-map.md
+      - Overview 产品补充:
+          - 从 AI 功能到 Agent 产品: zh/product-foundations/from-ai-feature-to-agent-product.md
+          - Chat、Workflow 与 Agent: zh/product-foundations/chat-workflow-and-agent.md
+      - 附录 - 基础 Agent 循环: zh/01-basic-agent-loop.md
+  - English:
+      - Home: en/index.md
+      - 01 - Basic Agent Loop: en/01-basic-agent-loop.md
+  - Docs Workflow: README.md
