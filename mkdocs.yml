@@ -3,6 +3,13 @@ site_description: Bilingual tutorials for agent system architecture, from workfl
 docs_dir: docs
 theme:
   name: material
+  font: false
+  palette:
+    scheme: default
+    primary: brown
+    accent: deep orange
+extra_css:
+  - stylesheets/extra.css
 nav:
   - 中文:
       - 首页: zh/index.md
