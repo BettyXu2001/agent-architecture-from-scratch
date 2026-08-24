@@ -1,6 +1,11 @@
 ---
-title: 01 - 基础 Agent 循环
-lang: zh
+id: basic-agent-loop
+order: 9000
+section: legacy
+status: legacy
+title: "基础 Agent 循环"
+description: "用最小 Harness 理解模型调用、工具执行、上下文更新和停止条件。"
+updated_at: 2026-08-24
 ---
 
 # 01 - 基础 Agent 循环

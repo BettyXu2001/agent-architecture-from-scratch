@@ -1,0 +1,1306 @@
+{
+  "project_status": "active",
+  "updated_at": "2026-08-24T02:50:42+08:00",
+  "curriculum_modules": 18,
+  "chapters": [
+    {
+      "id": "ov01-architecture-map",
+      "order": 10,
+      "section": "overview",
+      "status": "draft",
+      "title": {
+        "zh-CN": "Agent System Architecture Map"
+      },
+      "description": {
+        "zh-CN": "建立 Agent 系统的复杂度、分层与协作地图。"
+      },
+      "url": "zh/00-overview/agent-system-architecture-map/",
+      "urls": {
+        "zh-CN": "zh/00-overview/agent-system-architecture-map/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "p01-from-ai-feature-to-agent-product",
+      "order": 20,
+      "section": "product-foundations",
+      "status": "draft",
+      "title": {
+        "zh-CN": "从 AI 功能到 Agent 产品"
+      },
+      "description": {
+        "zh-CN": "判断什么时候需要普通 AI 功能、Workflow、Single Agent 或 Multi-Agent。"
+      },
+      "url": "zh/product-foundations/from-ai-feature-to-agent-product/",
+      "urls": {
+        "zh-CN": "zh/product-foundations/from-ai-feature-to-agent-product/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "p02-chat-workflow-agent",
+      "order": 30,
+      "section": "product-foundations",
+      "status": "draft",
+      "title": {
+        "zh-CN": "Chat、Workflow 与 Agent：不要把界面当成架构"
+      },
+      "description": {
+        "zh-CN": "区分用户交互界面与系统执行架构，避免把聊天框误认为 Agent。"
+      },
+      "url": "zh/product-foundations/chat-workflow-and-agent/",
+      "urls": {
+        "zh-CN": "zh/product-foundations/chat-workflow-and-agent/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "agent-workflow-agentic-system",
+      "order": 110,
+      "section": "overview",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Agent、Workflow 与 Agentic System"
+      },
+      "description": {
+        "zh-CN": "一个产品接入大模型、知识库和工具后，是不是 Agent？答案取决于谁拥有下一步决策权，而不是组件数量。代码规定“先分类，再查询，最后生成”是 Workflow；模型能根据观察动态决定查询、追问、修改计划或停止，更接..."
+      },
+      "url": "zh/00-overview/agent-workflow-agentic-system/",
+      "urls": {
+        "zh-CN": "zh/00-overview/agent-workflow-agentic-system/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "augmented-llm-to-distributed-system",
+      "order": 120,
+      "section": "overview",
+      "status": "planned",
+      "title": {
+        "zh-CN": "从 Augmented LLM 到 Distributed Agent System"
+      },
+      "description": {
+        "zh-CN": "团队常把 RAG、工具、Memory、Multi-Agent 和 A2A 一次塞入方案，在需求尚未验证时就承担分布式系统成本。本章用复杂度阶梯回答：下一层到底新增什么能力与责任？"
+      },
+      "url": "zh/00-overview/augmented-llm-to-distributed-system/",
+      "urls": {
+        "zh-CN": "zh/00-overview/augmented-llm-to-distributed-system/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "architecture-decision-framework",
+      "order": 130,
+      "section": "overview",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Architecture Decision Framework"
+      },
+      "description": {
+        "zh-CN": "“这个需求要不要 Multi-Agent？”问得太早。正确顺序是先确定任务、验收和风险，再决定控制、推理、上下文、拓扑与运行时。"
+      },
+      "url": "zh/00-overview/architecture-decision-framework/",
+      "urls": {
+        "zh-CN": "zh/00-overview/architecture-decision-framework/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "system-flows",
+      "order": 140,
+      "section": "overview",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Control Flow、Data Flow、Context Flow 与 State Flow"
+      },
+      "description": {
+        "zh-CN": "一张“Agent A → Agent B”的箭头图常混合四件事：谁决定调用、传了什么业务数据、模型看到了什么、系统状态如何变化。混在一起后，权限泄漏、恢复错误和结果归属都难以发现。"
+      },
+      "url": "zh/00-overview/system-flows/",
+      "urls": {
+        "zh-CN": "zh/00-overview/system-flows/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf01-sequential",
+      "order": 201,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Sequential / Prompt Chaining"
+      },
+      "description": {
+        "zh-CN": "一次调用同时研究、起草、校验和润色，提示词会承担过多目标，任何局部错误也难以定位。Sequential 把稳定任务拆成有顺序、有契约的阶段。"
+      },
+      "url": "zh/01-workflows/wf01-sequential/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf01-sequential/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf02-routing",
+      "order": 202,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Routing"
+      },
+      "description": {
+        "zh-CN": "不同请求需要不同能力与政策，却都进入同一提示词，导致上下文臃肿、答案不稳定。Routing 先判断类别，再选择有限分支。"
+      },
+      "url": "zh/01-workflows/wf02-routing/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf02-routing/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf03-parallel",
+      "order": 203,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Parallelization / Fan-out Fan-in"
+      },
+      "description": {
+        "zh-CN": "多个互不依赖的子任务串行执行会放大等待；单一回答也可能缺少多视角覆盖。Parallelization 同时运行独立工作，再合并结果。"
+      },
+      "url": "zh/01-workflows/wf03-parallel/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf03-parallel/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf04-evaluator",
+      "order": 204,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Evaluator–Optimizer"
+      },
+      "description": {
+        "zh-CN": "一次生成很难稳定满足可明确检查的质量标准，但让生成器无限自我修改又会循环。Evaluator–Optimizer 把生成和评价分离，并设置有界反馈回路。"
+      },
+      "url": "zh/01-workflows/wf04-evaluator/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf04-evaluator/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf05-composition",
+      "order": 205,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Workflow Composition：Branch、Join、Loop 与 Fallback"
+      },
+      "description": {
+        "zh-CN": "真实产品不是单一 pattern，而是线性步骤、条件分支、并行汇合、有界循环与降级的组合。缺少组合语义会让错误路径成为隐式代码。"
+      },
+      "url": "zh/01-workflows/wf05-composition/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf05-composition/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "wf06-comparison",
+      "order": 206,
+      "section": "workflows",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Workflow vs Agent"
+      },
+      "description": {
+        "zh-CN": "Workflow 稳定但覆盖有限，Agent 灵活但不确定。团队需要基于任务证据选择，而不是把 Agent 当作默认升级方向。"
+      },
+      "url": "zh/01-workflows/wf06-comparison/",
+      "urls": {
+        "zh-CN": "zh/01-workflows/wf06-comparison/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa01-react",
+      "order": 301,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "ReAct Architecture"
+      },
+      "description": {
+        "zh-CN": "开放任务的下一步依赖工具返回，无法在运行前写成完整路径。ReAct 让模型在行动与观察之间迭代更新决策。"
+      },
+      "url": "zh/02-single-agent/sa01-react/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa01-react/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa02-loop",
+      "order": 302,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Reason–Act–Observe Loop"
+      },
+      "description": {
+        "zh-CN": "只画一个圆环无法实现可运营 Agent：必须明确每轮读取什么、产出什么、谁执行、状态何时提交。"
+      },
+      "url": "zh/02-single-agent/sa02-loop/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa02-loop/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa03-reflection",
+      "order": 303,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Reflection / Self-Critique"
+      },
+      "description": {
+        "zh-CN": "Agent 完成后可能遗漏约束或未利用已有证据。Reflection 在最终提交前重新检查轨迹与候选结果。"
+      },
+      "url": "zh/02-single-agent/sa03-reflection/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa03-reflection/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa04-critic",
+      "order": 304,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Critic and Revision"
+      },
+      "description": {
+        "zh-CN": "生成者容易重复自己的盲点。独立 Critic 用不同指令、上下文或模型评价候选，再由 Reviser 定向修改。"
+      },
+      "url": "zh/02-single-agent/sa04-critic/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa04-critic/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa05-tools",
+      "order": 305,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Tool-Using Agent as an Architecture Boundary"
+      },
+      "description": {
+        "zh-CN": "模型能提出行动意图，但不能成为执行权限本身。若工具只是任意函数入口，Prompt 注入和参数错误会直接变成外部副作用。"
+      },
+      "url": "zh/02-single-agent/sa05-tools/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa05-tools/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "sa06-termination",
+      "order": 306,
+      "section": "single-agent",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Termination、Clarification 与 Budget"
+      },
+      "description": {
+        "zh-CN": "Agent 不知道何时停，就会过早回答、反复搜索或在信息不足时猜测。停止是一等架构能力，不是 Prompt 末尾一句话。"
+      },
+      "url": "zh/02-single-agent/sa06-termination/",
+      "urls": {
+        "zh-CN": "zh/02-single-agent/sa06-termination/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl01-static",
+      "order": 401,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Plan-and-Execute"
+      },
+      "description": {
+        "zh-CN": "ReAct 一步一决策容易局部贪心，用户也难以预判长任务范围。Plan-and-Execute 先形成显式步骤，再按计划执行。"
+      },
+      "url": "zh/03-planning/pl01-static/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl01-static/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl02-planner-executor",
+      "order": 402,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Planner–Executor"
+      },
+      "description": {
+        "zh-CN": "同一模型一边规划一边执行会混淆全局目标与局部工具细节。角色分离让计划可校验、执行可替换。"
+      },
+      "url": "zh/03-planning/pl02-planner-executor/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl02-planner-executor/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl03-replanner",
+      "order": 403,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Planner–Executor–Replanner"
+      },
+      "description": {
+        "zh-CN": "静态计划遇到新证据、工具失败或目标变化后会失效。Replanner 根据已完成事实更新剩余工作。"
+      },
+      "url": "zh/03-planning/pl03-replanner/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl03-replanner/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl04-dependency",
+      "order": 404,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Task Decomposition and Dependency Graph"
+      },
+      "description": {
+        "zh-CN": "任务列表只表达顺序，无法说明哪些工作可并行、哪些结果阻塞后续，也无法可靠传播取消。"
+      },
+      "url": "zh/03-planning/pl04-dependency/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl04-dependency/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl05-selection",
+      "order": 405,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Plan Selection and Validation"
+      },
+      "description": {
+        "zh-CN": "Planner 给出的第一份计划可能不可执行、过贵或忽略关键约束。执行前需要硬校验，必要时比较候选。"
+      },
+      "url": "zh/03-planning/pl05-selection/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl05-selection/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pl06-ledger",
+      "order": 406,
+      "section": "planning",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Progress Ledger and Replanning"
+      },
+      "description": {
+        "zh-CN": "消息历史无法可靠回答完成了什么、产物在哪里、还剩多少工作。长任务需要独立于对话的进度账本。"
+      },
+      "url": "zh/03-planning/pl06-ledger/",
+      "urls": {
+        "zh-CN": "zh/03-planning/pl06-ledger/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx01-engineering",
+      "order": 501,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Engineering for Agent Systems"
+      },
+      "description": {
+        "zh-CN": "模型不是缺少所有信息，而是缺少当前决策所需的正确信息。把全部历史塞入上下文会引入噪声、泄漏和成本。"
+      },
+      "url": "zh/04-context/cx01-engineering/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx01-engineering/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx02-selection",
+      "order": 502,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Selection and Progressive Disclosure"
+      },
+      "description": {
+        "zh-CN": "一次给出所有工具说明、文档和历史会稀释当前目标。Progressive Disclosure 按需逐层开放。"
+      },
+      "url": "zh/04-context/cx02-selection/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx02-selection/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx03-passing",
+      "order": 503,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Passing between Components"
+      },
+      "description": {
+        "zh-CN": "组件直接转发整段对话会传播噪声和隐私，也让接收者不知道什么是要求、证据或猜测。"
+      },
+      "url": "zh/04-context/cx03-passing/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx03-passing/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx04-isolation",
+      "order": 504,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Isolation"
+      },
+      "description": {
+        "zh-CN": "多 Agent 共享全部历史会造成角色干扰、敏感数据横向扩散和上下文竞争。"
+      },
+      "url": "zh/04-context/cx04-isolation/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx04-isolation/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx05-compression",
+      "order": 505,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Compression and Summarization"
+      },
+      "description": {
+        "zh-CN": "长任务轨迹不断增长，成本上升且早期约束可能被挤出。Compression 将历史转成可继续工作的紧凑状态。"
+      },
+      "url": "zh/04-context/cx05-compression/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx05-compression/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cx06-provenance",
+      "order": 506,
+      "section": "context",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context Provenance and Access Boundary"
+      },
+      "description": {
+        "zh-CN": "Agent 看到一段内容却不知道来源、时间、所有者和可信度，既无法引用，也无法正确执行权限与注入防护。"
+      },
+      "url": "zh/04-context/cx06-provenance/",
+      "urls": {
+        "zh-CN": "zh/04-context/cx06-provenance/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm01-working",
+      "order": 601,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Working Memory"
+      },
+      "description": {
+        "zh-CN": "当前任务的计划、最近观察与临时变量需要跨步骤保留，但不应永久记住。"
+      },
+      "url": "zh/05-memory/mm01-working/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm01-working/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm02-episodic",
+      "order": 602,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Episodic Memory"
+      },
+      "description": {
+        "zh-CN": "Agent 需要利用过去任务经验，却不能把每次对话都当永久事实。"
+      },
+      "url": "zh/05-memory/mm02-episodic/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm02-episodic/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm03-semantic",
+      "order": 603,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Semantic Memory"
+      },
+      "description": {
+        "zh-CN": "跨任务稳定事实与偏好需要被检索，但来源和有效期必须清楚。"
+      },
+      "url": "zh/05-memory/mm03-semantic/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm03-semantic/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm04-procedural",
+      "order": 604,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Procedural / Skill Memory"
+      },
+      "description": {
+        "zh-CN": "系统需要复用成功做法，但不能让一次偶然轨迹自动变成高权限流程。"
+      },
+      "url": "zh/05-memory/mm04-procedural/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm04-procedural/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm05-shared-private",
+      "order": 605,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Shared vs Private Memory"
+      },
+      "description": {
+        "zh-CN": "多 Agent 需要共享成果，但全局共享会泄漏数据并造成角色互相污染。"
+      },
+      "url": "zh/05-memory/mm05-shared-private/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm05-shared-private/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm06-policy",
+      "order": 606,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Memory Retrieval、Write Policy and Forgetting"
+      },
+      "description": {
+        "zh-CN": "记忆价值取决于何时读、什么能写、何时忘，而不取决于存储量。"
+      },
+      "url": "zh/05-memory/mm06-policy/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm06-policy/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mm07-artifact",
+      "order": 607,
+      "section": "memory",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Artifact / Workspace as Memory"
+      },
+      "description": {
+        "zh-CN": "长任务的大文件和中间成果不适合反复塞进消息，也不应被自由摘要替代。"
+      },
+      "url": "zh/05-memory/mm07-artifact/",
+      "urls": {
+        "zh-CN": "zh/05-memory/mm07-artifact/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma01-why",
+      "order": 701,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Why Multi-Agent?"
+      },
+      "description": {
+        "zh-CN": "单 Agent 在工具过多、上下文过长、专业目标冲突或独立子任务较多时会成为瓶颈，但拆 Agent 本身并不创造价值。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma01-why/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma01-why/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma02-avoid",
+      "order": 702,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "When Not to Use Multi-Agent"
+      },
+      "description": {
+        "zh-CN": "Multi-Agent 容易在 Demo 中显得聪明，却可能把一个 Prompt 问题放大成分布式协调问题。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma02-avoid/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma02-avoid/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma03-comparison",
+      "order": 703,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Single Agent vs Modular Single Agent vs Multi-Agent"
+      },
+      "description": {
+        "zh-CN": "工具函数、Prompt 模块和独立 Agent 常被混为一谈，导致系统宣称 Multi-Agent 却没有真实决策边界。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma03-comparison/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma03-comparison/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma04-roles",
+      "order": 704,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Agent Specialization and Role Boundary"
+      },
+      "description": {
+        "zh-CN": "角色只写成“你是专家”无法建立可靠分工，容易角色漂移、工具越权和重复劳动。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma04-roles/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma04-roles/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma05-ownership",
+      "order": 705,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Final Answer Ownership"
+      },
+      "description": {
+        "zh-CN": "多个 Agent 都能输出时，用户会收到重复、矛盾或无人负责的答案。必须有唯一可解释的最终答案所有权。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma05-ownership/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma05-ownership/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "ma06-economics",
+      "order": 706,
+      "section": "multi-agent-fundamentals",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Context、Cost and Failure Radius"
+      },
+      "description": {
+        "zh-CN": "Multi-Agent 可能节省单个上下文，却增加重复前缀、通信和合成；一个错误委派还会沿链级联。"
+      },
+      "url": "zh/06-multi-agent-fundamentals/ma06-economics/",
+      "urls": {
+        "zh-CN": "zh/06-multi-agent-fundamentals/ma06-economics/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp01-agents-as-tools",
+      "order": 801,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Subagents / Agents as Tools"
+      },
+      "description": {
+        "zh-CN": "主 Agent 需要专业帮助，但仍需保持用户关系、全局目标和最终答案控制权。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp01-agents-as-tools/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp01-agents-as-tools/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp02-supervisor",
+      "order": 802,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Supervisor / Manager"
+      },
+      "description": {
+        "zh-CN": "多个 Specialist 需要统一分解、委派、预算、合成和停止，否则会重复工作或无人负责。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp02-supervisor/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp02-supervisor/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp03-router-parallel",
+      "order": 803,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Router and Parallel Specialists"
+      },
+      "description": {
+        "zh-CN": "请求可能涉及一到多个独立领域；串行 Supervisor 会增加等待，单选 Router 又可能漏掉多意图。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp03-router-parallel/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp03-router-parallel/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp04-handoff",
+      "order": 804,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Handoff"
+      },
+      "description": {
+        "zh-CN": "某些 Specialist 需要直接与用户连续交流；Manager 代传每句话会损失细节、增加延迟和上下文。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp04-handoff/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp04-handoff/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp05-group-chat",
+      "order": 805,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Round Robin and Selector Group Chat"
+      },
+      "description": {
+        "zh-CN": "一些任务需要多个角色基于彼此结果迭代，而不是独立返回一次；需要定义谁下一位发言。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp05-group-chat/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp05-group-chat/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp06-swarm",
+      "order": 806,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Swarm"
+      },
+      "description": {
+        "zh-CN": "中心 Supervisor 可能成为瓶颈；在角色网络中，当前 Agent 可更快判断应该把控制交给哪个邻居。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp06-swarm/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp06-swarm/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "mp07-hybrid",
+      "order": 807,
+      "section": "multi-agent-patterns",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Hybrid Multi-Agent Patterns"
+      },
+      "description": {
+        "zh-CN": "真实产品常同时需要入口路由、后台专业计算、直接 Handoff 和质量评价，单一 Pattern 无法覆盖。"
+      },
+      "url": "zh/07-multi-agent-patterns/mp07-hybrid/",
+      "urls": {
+        "zh-CN": "zh/07-multi-agent-patterns/mp07-hybrid/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy01-supervisor",
+      "order": 901,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Hierarchical Supervisor"
+      },
+      "description": {
+        "zh-CN": "单层 Supervisor 的 Worker 太多、上下文过载时，需要把控制分成全局与团队两级。"
+      },
+      "url": "zh/08-hierarchical/hy01-supervisor/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy01-supervisor/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy02-tree",
+      "order": 902,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Supervisor Tree"
+      },
+      "description": {
+        "zh-CN": "多个 Supervisor 形成树状委派，必须定义父子责任、结果回传和全局预算。"
+      },
+      "url": "zh/08-hierarchical/hy02-tree/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy02-tree/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy03-teams",
+      "order": 903,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Teams of Teams"
+      },
+      "description": {
+        "zh-CN": "大型目标包含多个内部协作方式不同的团队，单一 Worker 接口无法表达。"
+      },
+      "url": "zh/08-hierarchical/hy03-teams/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy03-teams/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy04-recursive",
+      "order": 904,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Recursive Delegation"
+      },
+      "description": {
+        "zh-CN": "任务分解深度在运行前未知时，Agent 可能递归创建子任务，但必须保证收敛。"
+      },
+      "url": "zh/08-hierarchical/hy04-recursive/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy04-recursive/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy05-autonomy",
+      "order": 905,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Local Autonomy and Global Control"
+      },
+      "description": {
+        "zh-CN": "团队需要根据局部信息灵活执行，同时全局必须控制目标、预算、策略和承诺。"
+      },
+      "url": "zh/08-hierarchical/hy05-autonomy/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy05-autonomy/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "hy06-context",
+      "order": 906,
+      "section": "hierarchical",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Hierarchical Context and Result Aggregation"
+      },
+      "description": {
+        "zh-CN": "完整上下文跨层复制会指数膨胀，过度摘要又会丢失用户约束和证据。"
+      },
+      "url": "zh/08-hierarchical/hy06-context/",
+      "urls": {
+        "zh-CN": "zh/08-hierarchical/hy06-context/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm01-direct",
+      "order": 1001,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Direct Message"
+      },
+      "description": {
+        "zh-CN": "Agent 之间需要点对点传递任务或结果，并明确发送者、接收者与关联任务。"
+      },
+      "url": "zh/09-communication/cm01-direct/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm01-direct/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm02-shared-state",
+      "order": 1002,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Shared State"
+      },
+      "description": {
+        "zh-CN": "多个组件需要读写同一任务事实，但自由覆盖会导致竞争和不可恢复状态。"
+      },
+      "url": "zh/09-communication/cm02-shared-state/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm02-shared-state/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm03-blackboard",
+      "order": 1003,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Blackboard"
+      },
+      "description": {
+        "zh-CN": "多个 Specialist 异步贡献线索，后续角色需要基于公共成果继续，而非互相点名。"
+      },
+      "url": "zh/09-communication/cm03-blackboard/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm03-blackboard/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm04-events",
+      "order": 1004,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Event / Publish–Subscribe"
+      },
+      "description": {
+        "zh-CN": "组件不应知道所有下游，但任务状态变化需异步通知多个消费者。"
+      },
+      "url": "zh/09-communication/cm04-events/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm04-events/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm05-private",
+      "order": 1005,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Private State and Context Packets"
+      },
+      "description": {
+        "zh-CN": "Agent 需要保留局部草稿和观察，同时向外只暴露协作必需结果。"
+      },
+      "url": "zh/09-communication/cm05-private/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm05-private/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm06-message-state-artifact",
+      "order": 1006,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Message vs State vs Artifact"
+      },
+      "description": {
+        "zh-CN": "系统常用一条消息同时承担通知、当前事实和大文件，导致恢复和版本混乱。"
+      },
+      "url": "zh/09-communication/cm06-message-state-artifact/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm06-message-state-artifact/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "cm07-topology",
+      "order": 1007,
+      "section": "communication",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Communication Topology"
+      },
+      "description": {
+        "zh-CN": "通信边决定信息、成本和故障如何传播；全连接并非默认最灵活方案。"
+      },
+      "url": "zh/09-communication/cm07-topology/",
+      "urls": {
+        "zh-CN": "zh/09-communication/cm07-topology/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr01-mcp",
+      "order": 1101,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "MCP Architecture：Host、Client、Server"
+      },
+      "description": {
+        "zh-CN": "AI 应用需要以统一方式发现和调用外部工具、资源与提示，同时让应用保留上下文、同意和安全控制。"
+      },
+      "url": "zh/10-protocols/pr01-mcp/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr01-mcp/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr02-a2a",
+      "order": 1102,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "A2A Architecture：Client Agent and Remote Agent"
+      },
+      "description": {
+        "zh-CN": "独立团队或厂商的 Agent 需要在不暴露内部工具、Memory 和实现的情况下协作。"
+      },
+      "url": "zh/10-protocols/pr02-a2a/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr02-a2a/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr03-comparison",
+      "order": 1103,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "MCP vs A2A"
+      },
+      "description": {
+        "zh-CN": "两种协议都涉及 Agent，很容易误选：把独立 Agent 当工具会丢失任务生命周期，把普通工具当 Agent会增加复杂度。"
+      },
+      "url": "zh/10-protocols/pr03-comparison/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr03-comparison/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr04-discovery",
+      "order": 1104,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Agent Card and Capability Discovery"
+      },
+      "description": {
+        "zh-CN": "Client 在调用前需要知道远程 Agent 是谁、在哪里、支持哪些接口和技能，以及如何认证。"
+      },
+      "url": "zh/10-protocols/pr04-discovery/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr04-discovery/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr05-objects",
+      "order": 1105,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Task、Message、Part and Artifact"
+      },
+      "description": {
+        "zh-CN": "自然语言消息、长任务状态和最终文件混在一起时，客户端无法可靠追踪、恢复和交付。"
+      },
+      "url": "zh/10-protocols/pr05-objects/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr05-objects/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr06-trust",
+      "order": 1106,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Agent Identity、Authentication and Trust"
+      },
+      "description": {
+        "zh-CN": "协议互通不等于可信。系统必须区分用户、Client、Remote Agent、Server 和下游 API 的身份与权限。"
+      },
+      "url": "zh/10-protocols/pr06-trust/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr06-trust/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "pr07-delivery",
+      "order": 1107,
+      "section": "protocols",
+      "status": "planned",
+      "title": {
+        "zh-CN": "Sync、Streaming and Async Tasks"
+      },
+      "description": {
+        "zh-CN": "Agent 工作从毫秒回答到数小时任务，单一同步请求会超时，纯轮询又让体验迟钝。"
+      },
+      "url": "zh/10-protocols/pr07-delivery/",
+      "urls": {
+        "zh-CN": "zh/10-protocols/pr07-delivery/"
+      },
+      "translation_status": "pending",
+      "updated_at": "2026-08-24"
+    },
+    {
+      "id": "basic-agent-loop",
+      "order": 9000,
+      "section": "legacy",
+      "status": "legacy",
+      "title": {
+        "zh-CN": "基础 Agent 循环",
+        "en-US": "Basic Agent Loop"
+      },
+      "description": {
+        "zh-CN": "用最小 Harness 理解模型调用、工具执行、上下文更新和停止条件。",
+        "en-US": "Use a minimal harness to understand model calls, tool execution, context updates, and stopping conditions."
+      },
+      "url": "zh/01-basic-agent-loop/",
+      "urls": {
+        "zh-CN": "zh/01-basic-agent-loop/",
+        "en-US": "en/01-basic-agent-loop/"
+      },
+      "translation_status": "complete",
+      "updated_at": "2026-08-24"
+    }
+  ]
+}

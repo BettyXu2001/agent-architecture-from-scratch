@@ -1,13 +1,11 @@
 ---
-id: P01
-title: 从 AI 功能到 Agent 产品
-lang: zh
+id: p01-from-ai-feature-to-agent-product
+order: 20
+section: product-foundations
 status: draft
-audience: [product-manager, ai-application-builder]
-prerequisites: []
-concepts: [ai-feature, workflow, agent, autonomy]
-example: examples/product-decisions/agent_product_classifier.py
-last_reviewed: 2026-08-24
+title: "从 AI 功能到 Agent 产品"
+description: "判断什么时候需要普通 AI 功能、Workflow、Single Agent 或 Multi-Agent。"
+updated_at: 2026-08-24
 ---
 
 # P01：从 AI 功能到 Agent 产品

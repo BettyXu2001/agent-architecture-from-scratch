@@ -1,8 +1,11 @@
 ---
-title: 01 - Basic Agent Loop
-lang: en
-source: ../zh/01-basic-agent-loop.md
-source_hash: 8ba421a05238c882
+id: basic-agent-loop
+order: 9000
+section: legacy
+status: legacy
+title: "Basic Agent Loop"
+description: "Use a minimal harness to understand model calls, tool execution, context updates, and stopping conditions."
+updated_at: 2026-08-24
 ---
 
 # 01 - Basic Agent Loop

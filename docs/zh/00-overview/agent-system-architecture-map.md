@@ -1,13 +1,11 @@
 ---
-id: OV01
-title: Agent System Architecture Map
-lang: zh
+id: ov01-architecture-map
+order: 10
+section: overview
 status: draft
-module: overview
-prerequisites: []
-concepts: [workflow, single-agent, multi-agent, orchestration, architecture-map]
-example: examples/architecture-map/architecture_card.py
-last_reviewed: 2026-08-24
+title: "Agent System Architecture Map"
+description: "建立 Agent 系统的复杂度、分层与协作地图。"
+updated_at: 2026-08-24
 ---
 
 # OV01：Agent System Architecture Map

@@ -1,13 +1,11 @@
 ---
-id: P02
-title: Chat、Workflow 与 Agent：不要把界面当成架构
-lang: zh
+id: p02-chat-workflow-agent
+order: 30
+section: product-foundations
 status: draft
-audience: [product-manager, ai-application-builder]
-prerequisites: [P01]
-concepts: [chat, workflow, agent, product-interface, execution-control]
-example: examples/product-decisions/product_shape_advisor.py
-last_reviewed: 2026-08-24
+title: "Chat、Workflow 与 Agent：不要把界面当成架构"
+description: "区分用户交互界面与系统执行架构，避免把聊天框误认为 Agent。"
+updated_at: 2026-08-24
 ---
 
 # P02：Chat、Workflow 与 Agent——不要把界面当成架构
