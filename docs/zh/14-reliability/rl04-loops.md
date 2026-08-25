@@ -1,8 +1,13 @@
 ---
 id: RL04
-title: Termination and Loop Detection
-lang: zh
+slug: zh/14-reliability/rl04-loops
+order: 1504
+section: reliability
 status: complete
+title: "Termination and Loop Detection"
+description: "Agent 可能重复行动、角色互相交接或计划震荡，max_steps 只能限制损失不能识别原因。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

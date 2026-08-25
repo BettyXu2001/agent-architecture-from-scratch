@@ -1,8 +1,13 @@
 ---
 id: SC02
-title: Task Allocation and Capability Matching
-lang: zh
+slug: zh/12-scheduling/sc02-allocation
+order: 1302
+section: scheduling
 status: complete
+title: "Task Allocation and Capability Matching"
+description: "把任务分给第一个可用 Agent 会造成能力、权限、数据域或成本不匹配。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

@@ -1,8 +1,13 @@
 ---
 id: GV02
-title: Approval Gates
-lang: zh
+slug: zh/13-governance/gv02-approval
+order: 1402
+section: governance
 status: complete
+title: "Approval Gates"
+description: "高风险动作需要在执行前展示准确预览并获得不可混淆的授权。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

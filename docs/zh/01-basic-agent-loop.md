@@ -1,5 +1,6 @@
 ---
 id: basic-agent-loop
+slug: zh/01-basic-agent-loop
 order: 9000
 section: legacy
 status: legacy

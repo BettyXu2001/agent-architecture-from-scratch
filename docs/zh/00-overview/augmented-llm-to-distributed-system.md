@@ -1,5 +1,6 @@
 ---
 id: augmented-llm-to-distributed-system
+slug: zh/00-overview/augmented-llm-to-distributed-system
 order: 120
 section: overview
 status: planned

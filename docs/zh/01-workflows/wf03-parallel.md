@@ -1,5 +1,6 @@
 ---
 id: wf03-parallel
+slug: zh/01-workflows/wf03-parallel
 order: 203
 section: workflows
 status: planned

@@ -1,8 +1,13 @@
 ---
 id: GV01
-title: Human-in-the-Loop
-lang: zh
+slug: zh/13-governance/gv01-hitl
+order: 1401
+section: governance
 status: complete
+title: "Human-in-the-Loop"
+description: "Agent 的不确定性、风险或价值判断需要人参与，但每一步都审批会消灭自动化收益。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

@@ -1,5 +1,6 @@
 ---
 id: cx02-selection
+slug: zh/04-context/cx02-selection
 order: 502
 section: context
 status: planned

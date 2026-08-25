@@ -1,8 +1,13 @@
 ---
 id: RS08
-title: 版本 8：用状态图统一复杂编排
-lang: zh
+slug: zh/17-real-system/rs08-graph
+order: 1808
+section: real-system
 status: complete
+title: "版本 8：用状态图统一复杂编排"
+description: "到版本 7，路由、规划、专家团队、质量返工和人工批准已经形成复杂生命周期。继续散落在回调和提示词中会难以理解与恢复，因此用状态图统一业务阶段，而不是把所有 Agent 行为改写成图。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [graph,state-machine,durable-execution]

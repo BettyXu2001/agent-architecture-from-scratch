@@ -1,5 +1,6 @@
 ---
 id: hy06-context
+slug: zh/08-hierarchical/hy06-context
 order: 906
 section: hierarchical
 status: planned

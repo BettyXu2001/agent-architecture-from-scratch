@@ -1,5 +1,6 @@
 ---
 id: cx06-provenance
+slug: zh/04-context/cx06-provenance
 order: 506
 section: context
 status: planned

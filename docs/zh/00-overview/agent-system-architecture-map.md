@@ -1,5 +1,6 @@
 ---
 id: ov01-architecture-map
+slug: zh/00-overview/agent-system-architecture-map
 order: 10
 section: overview
 status: draft

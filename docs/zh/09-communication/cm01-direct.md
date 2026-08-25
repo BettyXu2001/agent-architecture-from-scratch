@@ -1,5 +1,6 @@
 ---
 id: cm01-direct
+slug: zh/09-communication/cm01-direct
 order: 1001
 section: communication
 status: planned

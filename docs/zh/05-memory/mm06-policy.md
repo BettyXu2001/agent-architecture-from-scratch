@@ -1,5 +1,6 @@
 ---
 id: mm06-policy
+slug: zh/05-memory/mm06-policy
 order: 606
 section: memory
 status: planned

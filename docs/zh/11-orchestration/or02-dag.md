@@ -1,8 +1,13 @@
 ---
 id: OR02
-title: DAG
-lang: zh
+slug: zh/11-orchestration/or02-dag
+order: 1202
+section: orchestration
 status: complete
+title: "DAG"
+description: "具有明确依赖的任务需要并行和拓扑调度，同时禁止循环。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

@@ -1,8 +1,13 @@
 ---
 id: OR03
-title: Graph
-lang: zh
+slug: zh/11-orchestration/or03-graph
+order: 1203
+section: orchestration
 status: complete
+title: "Graph"
+description: "Agent 流程包含条件分支、回边和动态路径，DAG 不足以表达。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

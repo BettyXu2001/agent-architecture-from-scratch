@@ -1,8 +1,13 @@
 ---
 id: FC02
-title: LangGraph：把 Agent 建模为有状态图
-lang: zh
+slug: zh/16-framework-comparison/fc02-langgraph
+order: 1702
+section: framework-comparison
 status: complete
+title: "LangGraph：把 Agent 建模为有状态图"
+description: "LangGraph 的核心不是“很多 Agent”，而是持久化的 StateGraph：节点读取和更新状态，边决定下一步。显式控制流、检查点和可恢复执行适合长任务、审批与复杂分支。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [langgraph,graph,state,durable-execution]

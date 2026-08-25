@@ -1,5 +1,6 @@
 ---
 id: mp02-supervisor
+slug: zh/07-multi-agent-patterns/mp02-supervisor
 order: 802
 section: multi-agent-patterns
 status: planned

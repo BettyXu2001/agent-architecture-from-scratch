@@ -1,8 +1,13 @@
 ---
 id: RL02
-title: Retry and Fallback
-lang: zh
+slug: zh/14-reliability/rl02-retry
+order: 1502
+section: reliability
 status: complete
+title: "Retry and Fallback"
+description: "瞬时故障可重试，但语义错误和副作用盲重试会放大损害。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

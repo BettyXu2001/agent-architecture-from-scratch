@@ -1,5 +1,6 @@
 ---
 id: pr04-discovery
+slug: zh/10-protocols/pr04-discovery
 order: 1104
 section: protocols
 status: planned

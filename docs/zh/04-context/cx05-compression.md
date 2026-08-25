@@ -1,5 +1,6 @@
 ---
 id: cx05-compression
+slug: zh/04-context/cx05-compression
 order: 505
 section: context
 status: planned

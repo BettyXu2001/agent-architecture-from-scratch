@@ -1,5 +1,6 @@
 ---
 id: hy05-autonomy
+slug: zh/08-hierarchical/hy05-autonomy
 order: 905
 section: hierarchical
 status: planned

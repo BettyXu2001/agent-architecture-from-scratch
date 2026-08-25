@@ -1,5 +1,6 @@
 ---
 id: ma05-ownership
+slug: zh/06-multi-agent-fundamentals/ma05-ownership
 order: 705
 section: multi-agent-fundamentals
 status: planned

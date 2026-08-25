@@ -1,8 +1,13 @@
 ---
 id: EV01
-title: Trace、Span and Agent Run Model
-lang: zh
+slug: zh/15-evaluation/ev01-trace
+order: 1601
+section: evaluation
 status: complete
+title: "Trace、Span and Agent Run Model"
+description: "没有统一运行模型，团队只能看聊天文本，无法定位模型、工具、Handoff、等待和错误的因果关系。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

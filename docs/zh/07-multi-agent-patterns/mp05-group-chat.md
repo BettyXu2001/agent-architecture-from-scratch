@@ -1,5 +1,6 @@
 ---
 id: mp05-group-chat
+slug: zh/07-multi-agent-patterns/mp05-group-chat
 order: 805
 section: multi-agent-patterns
 status: planned

@@ -1,5 +1,6 @@
 ---
 id: system-flows
+slug: zh/00-overview/system-flows
 order: 140
 section: overview
 status: planned

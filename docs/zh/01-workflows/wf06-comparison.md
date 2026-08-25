@@ -1,5 +1,6 @@
 ---
 id: wf06-comparison
+slug: zh/01-workflows/wf06-comparison
 order: 206
 section: workflows
 status: planned

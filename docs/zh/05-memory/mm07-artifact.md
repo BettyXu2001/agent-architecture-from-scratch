@@ -1,5 +1,6 @@
 ---
 id: mm07-artifact
+slug: zh/05-memory/mm07-artifact
 order: 607
 section: memory
 status: planned

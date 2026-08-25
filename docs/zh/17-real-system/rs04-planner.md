@@ -1,8 +1,13 @@
 ---
 id: RS04
-title: 版本 4：Planner–Executor–Replanner
-lang: zh
+slug: zh/17-real-system/rs04-planner
+order: 1804
+section: real-system
 status: complete
+title: "版本 4：Planner–Executor–Replanner"
+description: "当报告跨多个公司、地区和时间段时，单个 ReAct Agent 容易局部探索过深、遗漏任务或重复劳动。Planner 提供全局任务图，Executor 完成原子任务，Replanner 只根据新证据修订未完成部分。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [planning,planner-executor,replanner,ledger]

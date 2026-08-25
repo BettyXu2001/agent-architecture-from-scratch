@@ -1,8 +1,13 @@
 ---
 id: RL08
-title: Recovery、Checkpoint and Resume
-lang: zh
+slug: zh/14-reliability/rl08-recovery
+order: 1508
+section: reliability
 status: complete
+title: "Recovery、Checkpoint and Resume"
+description: "进程或依赖故障后，从头运行浪费成本且可能重复副作用。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

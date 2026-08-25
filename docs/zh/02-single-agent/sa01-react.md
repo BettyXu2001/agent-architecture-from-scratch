@@ -1,5 +1,6 @@
 ---
 id: sa01-react
+slug: zh/02-single-agent/sa01-react
 order: 301
 section: single-agent
 status: planned

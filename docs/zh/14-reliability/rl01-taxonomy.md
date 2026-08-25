@@ -1,8 +1,13 @@
 ---
 id: RL01
-title: Agent Failure Taxonomy
-lang: zh
+slug: zh/14-reliability/rl01-taxonomy
+order: 1501
+section: reliability
 status: complete
+title: "Agent Failure Taxonomy"
+description: "Agent 失败不只有答案错误，还包括决策、工具、状态、通信、权限、运行时和产品承诺失败。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

@@ -1,5 +1,6 @@
 ---
 id: wf05-composition
+slug: zh/01-workflows/wf05-composition
 order: 205
 section: workflows
 status: planned

@@ -1,5 +1,6 @@
 ---
 id: cm02-shared-state
+slug: zh/09-communication/cm02-shared-state
 order: 1002
 section: communication
 status: planned

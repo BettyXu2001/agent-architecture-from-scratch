@@ -1,5 +1,6 @@
 ---
 id: sa06-termination
+slug: zh/02-single-agent/sa06-termination
 order: 306
 section: single-agent
 status: planned

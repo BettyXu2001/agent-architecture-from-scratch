@@ -1,8 +1,13 @@
 ---
 id: RS10
-title: 版本 10：可靠性、HITL、可观测与评估闭环
-lang: zh
+slug: zh/17-real-system/rs10-production
+order: 1810
+section: real-system
 status: complete
+title: "版本 10：可靠性、HITL、可观测与评估闭环"
+description: "最终升级不是再增加一个 Agent，而是让整个系统在真实故障、敏感操作和模型变化中仍兑现产品承诺。可靠性处理运行错误，HITL 管理决策边界，可观测性解释发生了什么，Evals 判断系统是否真的变好。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [reliability,hitl,observability,evals,production]

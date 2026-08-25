@@ -1,5 +1,6 @@
 ---
 id: cm04-events
+slug: zh/09-communication/cm04-events
 order: 1004
 section: communication
 status: planned

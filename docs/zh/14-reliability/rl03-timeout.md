@@ -1,8 +1,13 @@
 ---
 id: RL03
-title: Timeout and Cancellation
-lang: zh
+slug: zh/14-reliability/rl03-timeout
+order: 1503
+section: reliability
 status: complete
+title: "Timeout and Cancellation"
+description: "没有 deadline 的 Agent 会无限等待；取消不传播则后台仍消耗和执行。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

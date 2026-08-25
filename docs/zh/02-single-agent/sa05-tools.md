@@ -1,5 +1,6 @@
 ---
 id: sa05-tools
+slug: zh/02-single-agent/sa05-tools
 order: 305
 section: single-agent
 status: planned

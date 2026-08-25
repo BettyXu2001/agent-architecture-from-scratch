@@ -1,8 +1,13 @@
 ---
 id: SC01
-title: Task Graph and Delegation Contract
-lang: zh
+slug: zh/12-scheduling/sc01-contract
+order: 1301
+section: scheduling
 status: complete
+title: "Task Graph and Delegation Contract"
+description: "多 Agent 不能只靠一句“你负责研究”；任务依赖、完成和回传必须可验证。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

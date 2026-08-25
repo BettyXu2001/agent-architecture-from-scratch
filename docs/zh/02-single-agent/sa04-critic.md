@@ -1,5 +1,6 @@
 ---
 id: sa04-critic
+slug: zh/02-single-agent/sa04-critic
 order: 304
 section: single-agent
 status: planned

@@ -1,5 +1,6 @@
 ---
 id: pl04-dependency
+slug: zh/03-planning/pl04-dependency
 order: 404
 section: planning
 status: planned

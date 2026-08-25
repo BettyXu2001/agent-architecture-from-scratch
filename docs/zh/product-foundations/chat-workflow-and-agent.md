@@ -1,5 +1,6 @@
 ---
 id: p02-chat-workflow-agent
+slug: zh/product-foundations/chat-workflow-and-agent
 order: 30
 section: product-foundations
 status: draft

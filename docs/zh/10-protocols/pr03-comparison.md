@@ -1,5 +1,6 @@
 ---
 id: pr03-comparison
+slug: zh/10-protocols/pr03-comparison
 order: 1103
 section: protocols
 status: planned

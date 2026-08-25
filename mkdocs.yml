@@ -13,10 +13,57 @@ extra_css:
 nav:
   - 中文:
       - 首页: zh/index.md
-      - OV01 - Agent System Architecture Map: zh/00-overview/agent-system-architecture-map.md
-      - Overview 产品补充:
+      - Architecture Map:
+          - Agent System Architecture Map: zh/00-overview/agent-system-architecture-map.md
+          - Agent、Workflow 与 Agentic System: zh/00-overview/agent-workflow-agentic-system.md
+          - 从 Augmented LLM 到 Distributed Agent System: zh/00-overview/augmented-llm-to-distributed-system.md
+          - Architecture Decision Framework: zh/00-overview/architecture-decision-framework.md
+          - Control Flow、Data Flow、Context Flow 与 State Flow: zh/00-overview/system-flows.md
+      - Product Foundations:
           - 从 AI 功能到 Agent 产品: zh/product-foundations/from-ai-feature-to-agent-product.md
           - Chat、Workflow 与 Agent: zh/product-foundations/chat-workflow-and-agent.md
+      - Orchestration:
+          - Code-driven vs LLM-driven Orchestration: zh/11-orchestration/or01-control.md
+          - DAG: zh/11-orchestration/or02-dag.md
+          - Graph: zh/11-orchestration/or03-graph.md
+          - State Machine: zh/11-orchestration/or04-state-machine.md
+          - Event-driven Architecture: zh/11-orchestration/or05-events.md
+          - GraphFlow and Cyclic Workflows: zh/11-orchestration/or06-cycles.md
+          - Durable Execution、Checkpoint and Resume: zh/11-orchestration/or07-durable.md
+      - Scheduling:
+          - Task Graph and Delegation Contract: zh/12-scheduling/sc01-contract.md
+          - Task Allocation and Capability Matching: zh/12-scheduling/sc02-allocation.md
+          - Scheduler and Priority: zh/12-scheduling/sc03-priority.md
+          - Parallelism and Concurrency Limits: zh/12-scheduling/sc04-concurrency.md
+          - Queue and Backpressure: zh/12-scheduling/sc05-backpressure.md
+          - Consensus、Voting and Conflict Resolution: zh/12-scheduling/sc06-consensus.md
+          - Cancellation and Dependency Propagation: zh/12-scheduling/sc07-cancellation.md
+      - Governance:
+          - Human-in-the-Loop: zh/13-governance/gv01-hitl.md
+          - Approval Gates: zh/13-governance/gv02-approval.md
+          - Human Handoff and Escalation: zh/13-governance/gv03-handoff.md
+          - Mixed-Initiative Collaboration: zh/13-governance/gv04-mixed.md
+          - Guardrails and Policy Layer: zh/13-governance/gv05-guardrails.md
+          - Permission and Action Boundaries: zh/13-governance/gv06-permissions.md
+          - Audit、Accountability and Data Governance: zh/13-governance/gv07-audit.md
+      - Reliability:
+          - Agent Failure Taxonomy: zh/14-reliability/rl01-taxonomy.md
+          - Retry and Fallback: zh/14-reliability/rl02-retry.md
+          - Timeout and Cancellation: zh/14-reliability/rl03-timeout.md
+          - Termination and Loop Detection: zh/14-reliability/rl04-loops.md
+          - Idempotency and Side-Effect Safety: zh/14-reliability/rl05-idempotency.md
+          - Partial Failure and Compensation: zh/14-reliability/rl06-partial.md
+          - Multi-Agent Failure Modes: zh/14-reliability/rl07-multi-agent.md
+          - Recovery、Checkpoint and Resume: zh/14-reliability/rl08-recovery.md
+      - Evaluation:
+          - Trace、Span and Agent Run Model: zh/15-evaluation/ev01-trace.md
+          - Task-level Evaluation: zh/15-evaluation/ev02-task.md
+          - Trajectory Evaluation: zh/15-evaluation/ev03-trajectory.md
+          - Tool and Handoff Evaluation: zh/15-evaluation/ev04-tool-handoff.md
+          - Multi-Agent Evaluation: zh/15-evaluation/ev05-multi-agent.md
+          - Offline Evals and Golden Set: zh/15-evaluation/ev06-offline.md
+          - Online Evaluation and Human Feedback: zh/15-evaluation/ev07-online.md
+          - Cost、Latency and Quality Attribution: zh/15-evaluation/ev08-attribution.md
       - 附录 - 基础 Agent 循环: zh/01-basic-agent-loop.md
   - English:
       - Home: en/index.md

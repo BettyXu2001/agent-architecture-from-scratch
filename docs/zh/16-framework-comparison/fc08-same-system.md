@@ -1,8 +1,13 @@
 ---
 id: FC08
-title: 同一系统的多框架架构映射
-lang: zh
+slug: zh/16-framework-comparison/fc08-same-system
+order: 1708
+section: framework-comparison
 status: complete
+title: "同一系统的多框架架构映射"
+description: "框架不同，但稳定的产品架构概念应能互相映射：任务状态、阶段、角色、工具、Handoff、审批、恢复和观测。如果系统只能用某个类名解释，通常还没有形成清晰架构。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [comparison,mapping,portability,practice]

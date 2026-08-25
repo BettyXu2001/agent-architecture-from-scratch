@@ -1,8 +1,13 @@
 ---
 id: RS06
-title: 版本 6：Supervisor 与 Specialist Agents
-lang: zh
+slug: zh/17-real-system/rs06-supervisor
+order: 1806
+section: real-system
 status: complete
+title: "版本 6：Supervisor 与 Specialist Agents"
+description: "当研究、数据分析、风险判断和编辑需要不同工具、提示、权限与评估标准时，单 Agent 的上下文和权限过宽。Supervisor 负责分解、委派、合并和预算，Specialist 只完成边界清晰的专业任务。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [supervisor,specialists,multi-agent]

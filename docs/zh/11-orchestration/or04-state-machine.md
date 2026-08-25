@@ -1,8 +1,13 @@
 ---
 id: OR04
-title: State Machine
-lang: zh
+slug: zh/11-orchestration/or04-state-machine
+order: 1204
+section: orchestration
 status: complete
+title: "State Machine"
+description: "产品必须明确任务处于什么状态、允许哪些操作以及如何从失败恢复。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

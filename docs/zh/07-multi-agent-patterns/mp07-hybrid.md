@@ -1,5 +1,6 @@
 ---
 id: mp07-hybrid
+slug: zh/07-multi-agent-patterns/mp07-hybrid
 order: 807
 section: multi-agent-patterns
 status: planned

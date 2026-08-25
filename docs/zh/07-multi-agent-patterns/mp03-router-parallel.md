@@ -1,5 +1,6 @@
 ---
 id: mp03-router-parallel
+slug: zh/07-multi-agent-patterns/mp03-router-parallel
 order: 803
 section: multi-agent-patterns
 status: planned

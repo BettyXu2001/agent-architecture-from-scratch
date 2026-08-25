@@ -1,5 +1,6 @@
 ---
 id: mp01-agents-as-tools
+slug: zh/07-multi-agent-patterns/mp01-agents-as-tools
 order: 801
 section: multi-agent-patterns
 status: planned

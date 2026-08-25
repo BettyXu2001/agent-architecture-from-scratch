@@ -1,8 +1,13 @@
 ---
 id: FC04
-title: CrewAI：角色团队与事件流的组合
-lang: zh
+slug: zh/16-framework-comparison/fc04-crewai
+order: 1704
+section: framework-comparison
 status: complete
+title: "CrewAI：角色团队与事件流的组合"
+description: "Crew 强调有目标、角色和任务分工的 Agent 团队；Flow 强调带状态、事件和分支的可控业务流程。产品级用法通常不是二选一，而是让 Flow 管住生命周期，在某个节点调用 Crew 完成开放式协作。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [crewai,crew,flow,roles]

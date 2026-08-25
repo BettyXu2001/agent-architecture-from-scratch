@@ -1,5 +1,6 @@
 ---
 id: wf01-sequential
+slug: zh/01-workflows/wf01-sequential
 order: 201
 section: workflows
 status: planned

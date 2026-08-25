@@ -1,5 +1,6 @@
 ---
 id: sa02-loop
+slug: zh/02-single-agent/sa02-loop
 order: 302
 section: single-agent
 status: planned

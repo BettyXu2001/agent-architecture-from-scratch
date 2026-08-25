@@ -1,5 +1,6 @@
 ---
 id: ma02-avoid
+slug: zh/06-multi-agent-fundamentals/ma02-avoid
 order: 702
 section: multi-agent-fundamentals
 status: planned

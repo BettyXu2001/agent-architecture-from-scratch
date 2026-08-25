@@ -1,8 +1,13 @@
 ---
 id: FC07
-title: 从产品约束选择 Agent 框架
-lang: zh
+slug: zh/16-framework-comparison/fc07-selection
+order: 1707
+section: framework-comparison
 status: complete
+title: "从产品约束选择 Agent 框架"
+description: "不存在总体最好的框架，只有对当前风险、团队和生命周期更合适的组合。选型顺序应是任务确定性→持久化与审批→协作形态→生态与团队能力→退出成本，而不是先挑框架再迁就产品。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [selection,decision,tradeoff,product]

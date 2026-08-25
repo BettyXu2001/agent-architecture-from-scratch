@@ -1,5 +1,6 @@
 ---
 id: mm04-procedural
+slug: zh/05-memory/mm04-procedural
 order: 604
 section: memory
 status: planned

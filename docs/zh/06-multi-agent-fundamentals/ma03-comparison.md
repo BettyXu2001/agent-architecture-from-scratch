@@ -1,5 +1,6 @@
 ---
 id: ma03-comparison
+slug: zh/06-multi-agent-fundamentals/ma03-comparison
 order: 703
 section: multi-agent-fundamentals
 status: planned

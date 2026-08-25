@@ -1,8 +1,13 @@
 ---
 id: GV06
-title: Permission and Action Boundaries
-lang: zh
+slug: zh/13-governance/gv06-permissions
+order: 1406
+section: governance
 status: complete
+title: "Permission and Action Boundaries"
+description: "Agent 的能力清单不应等于用户权限，连接凭据也不应自动授予所有动作。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

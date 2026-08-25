@@ -1,8 +1,13 @@
 ---
 id: GV07
-title: Audit、Accountability and Data Governance
-lang: zh
+slug: zh/13-governance/gv07-audit
+order: 1407
+section: governance
 status: complete
+title: "Audit、Accountability and Data Governance"
+description: "复杂 Agent 的决定、数据流和责任若只留在聊天中，无法解释、纠错或满足治理。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

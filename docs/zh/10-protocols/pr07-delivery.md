@@ -1,5 +1,6 @@
 ---
 id: pr07-delivery
+slug: zh/10-protocols/pr07-delivery
 order: 1107
 section: protocols
 status: planned

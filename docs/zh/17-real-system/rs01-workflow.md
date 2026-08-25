@@ -1,8 +1,13 @@
 ---
 id: RS01
-title: 版本 1：从确定性工作流开始
-lang: zh
+slug: zh/17-real-system/rs01-workflow
+order: 1801
+section: real-system
 status: complete
+title: "版本 1：从确定性工作流开始"
+description: "第一版不需要自主 Agent。用户真正要的是一份结构完整、来源可追踪、按时返回的报告；固定流程已经能验证需求、数据源和质量标准，也提供以后比较的基线。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [workflow,baseline,research-product]

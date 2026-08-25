@@ -1,5 +1,6 @@
 ---
 id: pr06-trust
+slug: zh/10-protocols/pr06-trust
 order: 1106
 section: protocols
 status: planned

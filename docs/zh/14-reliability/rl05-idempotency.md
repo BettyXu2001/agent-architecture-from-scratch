@@ -1,8 +1,13 @@
 ---
 id: RL05
-title: Idempotency and Side-Effect Safety
-lang: zh
+slug: zh/14-reliability/rl05-idempotency
+order: 1505
+section: reliability
 status: complete
+title: "Idempotency and Side-Effect Safety"
+description: "重试、恢复和重复消息可能让发送、扣款、删除执行多次。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

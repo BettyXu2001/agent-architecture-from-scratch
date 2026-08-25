@@ -1,5 +1,6 @@
 ---
 id: wf04-evaluator
+slug: zh/01-workflows/wf04-evaluator
 order: 204
 section: workflows
 status: planned

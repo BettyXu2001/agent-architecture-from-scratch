@@ -1,8 +1,13 @@
 ---
 id: SC04
-title: Parallelism and Concurrency Limits
-lang: zh
+slug: zh/12-scheduling/sc04-concurrency
+order: 1304
+section: scheduling
 status: complete
+title: "Parallelism and Concurrency Limits"
+description: "无限并行会触发模型限流、数据库压力和成本峰值；过低并发又浪费时间。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

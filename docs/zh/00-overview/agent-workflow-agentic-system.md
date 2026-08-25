@@ -1,5 +1,6 @@
 ---
 id: agent-workflow-agentic-system
+slug: zh/00-overview/agent-workflow-agentic-system
 order: 110
 section: overview
 status: planned

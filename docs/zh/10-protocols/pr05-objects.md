@@ -1,5 +1,6 @@
 ---
 id: pr05-objects
+slug: zh/10-protocols/pr05-objects
 order: 1105
 section: protocols
 status: planned

@@ -1,8 +1,13 @@
 ---
 id: FC03
-title: AutoGen 与 Microsoft Agent Framework：从对话协作到企业工作流
-lang: zh
+slug: zh/16-framework-comparison/fc03-microsoft
+order: 1703
+section: framework-comparison
 status: complete
+title: "AutoGen 与 Microsoft Agent Framework：从对话协作到企业工作流"
+description: "AutoGen 让“会话中的多个角色”成为易理解的协作模型，团队、选择器、群聊和消息驱动适合探索协作行为。Microsoft Agent Framework 进一步把 Agent 抽象、会话状态、中间件、遥测和图工作流放进统一的企业运行模型。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [autogen,microsoft-agent-framework,teams,workflow]

@@ -1,5 +1,6 @@
 ---
 id: pl03-replanner
+slug: zh/03-planning/pl03-replanner
 order: 403
 section: planning
 status: planned

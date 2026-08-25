@@ -1,5 +1,6 @@
 ---
 id: pl01-static
+slug: zh/03-planning/pl01-static
 order: 401
 section: planning
 status: planned

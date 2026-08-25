@@ -1,5 +1,6 @@
 ---
 id: mm05-shared-private
+slug: zh/05-memory/mm05-shared-private
 order: 605
 section: memory
 status: planned

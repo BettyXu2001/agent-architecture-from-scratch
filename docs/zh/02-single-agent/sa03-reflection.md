@@ -1,5 +1,6 @@
 ---
 id: sa03-reflection
+slug: zh/02-single-agent/sa03-reflection
 order: 303
 section: single-agent
 status: planned

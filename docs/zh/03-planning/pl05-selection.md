@@ -1,5 +1,6 @@
 ---
 id: pl05-selection
+slug: zh/03-planning/pl05-selection
 order: 405
 section: planning
 status: planned

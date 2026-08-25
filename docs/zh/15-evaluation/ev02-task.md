@@ -1,8 +1,13 @@
 ---
 id: EV02
-title: Task-level Evaluation
-lang: zh
+slug: zh/15-evaluation/ev02-task
+order: 1602
+section: evaluation
 status: complete
+title: "Task-level Evaluation"
+description: "最终答案看似不错不代表用户目标完成；需按任务定义输入、环境、成功和副作用。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

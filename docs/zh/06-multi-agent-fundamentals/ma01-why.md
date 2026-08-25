@@ -1,5 +1,6 @@
 ---
 id: ma01-why
+slug: zh/06-multi-agent-fundamentals/ma01-why
 order: 701
 section: multi-agent-fundamentals
 status: planned

@@ -1,5 +1,6 @@
 ---
 id: pl06-ledger
+slug: zh/03-planning/pl06-ledger
 order: 406
 section: planning
 status: planned

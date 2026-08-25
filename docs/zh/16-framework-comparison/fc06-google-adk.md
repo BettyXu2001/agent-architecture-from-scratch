@@ -1,8 +1,13 @@
 ---
 id: FC06
-title: Google ADK：LLM Agent 与确定性 Workflow Agent
-lang: zh
+slug: zh/16-framework-comparison/fc06-google-adk
+order: 1706
+section: framework-comparison
 status: complete
+title: "Google ADK：LLM Agent 与确定性 Workflow Agent"
+description: "Google ADK 区分依赖模型推理的 LLM Agent 与负责确定性控制的 Workflow Agent。Sequential、Parallel、Loop 等组合原语让团队把确定流程写清，再在合适节点引入模型自主性，并可通过多 Agent 和 A2A 扩展。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [google-adk,workflow-agent,sequential,parallel,loop]

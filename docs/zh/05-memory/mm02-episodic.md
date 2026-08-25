@@ -1,5 +1,6 @@
 ---
 id: mm02-episodic
+slug: zh/05-memory/mm02-episodic
 order: 602
 section: memory
 status: planned

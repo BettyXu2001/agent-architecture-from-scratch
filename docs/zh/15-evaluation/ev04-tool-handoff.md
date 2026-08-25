@@ -1,8 +1,13 @@
 ---
 id: EV04
-title: Tool and Handoff Evaluation
-lang: zh
+slug: zh/15-evaluation/ev04-tool-handoff
+order: 1604
+section: evaluation
 status: complete
+title: "Tool and Handoff Evaluation"
+description: "工具与转移是高影响决策，需要独立测量选择、参数、权限和结果使用。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

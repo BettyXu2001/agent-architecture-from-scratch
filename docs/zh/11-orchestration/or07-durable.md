@@ -1,8 +1,13 @@
 ---
 id: OR07
-title: Durable Execution、Checkpoint and Resume
-lang: zh
+slug: zh/11-orchestration/or07-durable
+order: 1207
+section: orchestration
 status: complete
+title: "Durable Execution、Checkpoint and Resume"
+description: "长任务跨进程重启、用户等待与外部超时，内存循环无法保证恰好继续。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

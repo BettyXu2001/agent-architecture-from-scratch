@@ -1,8 +1,13 @@
 ---
 id: OR05
-title: Event-driven Architecture
-lang: zh
+slug: zh/11-orchestration/or05-events
+order: 1205
+section: orchestration
 status: complete
+title: "Event-driven Architecture"
+description: "组件需异步响应已发生事实，且生产者不应等待或知道所有消费者。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

@@ -1,5 +1,6 @@
 ---
 id: pr02-a2a
+slug: zh/10-protocols/pr02-a2a
 order: 1102
 section: protocols
 status: planned

@@ -1,8 +1,13 @@
 ---
 id: SC03
-title: Scheduler and Priority
-lang: zh
+slug: zh/12-scheduling/sc03-priority
+order: 1303
+section: scheduling
 status: complete
+title: "Scheduler and Priority"
+description: "多个任务争用有限模型、工具和人力，需要可解释顺序与公平性。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

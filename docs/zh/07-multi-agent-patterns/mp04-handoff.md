@@ -1,5 +1,6 @@
 ---
 id: mp04-handoff
+slug: zh/07-multi-agent-patterns/mp04-handoff
 order: 804
 section: multi-agent-patterns
 status: planned

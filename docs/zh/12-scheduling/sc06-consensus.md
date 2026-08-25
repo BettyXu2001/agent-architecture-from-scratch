@@ -1,8 +1,13 @@
 ---
 id: SC06
-title: Consensus、Voting and Conflict Resolution
-lang: zh
+slug: zh/12-scheduling/sc06-consensus
+order: 1306
+section: scheduling
 status: complete
+title: "Consensus、Voting and Conflict Resolution"
+description: "多个 Agent 结果冲突时，多数票看似简单，却可能放大同源错误且忽略证据。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

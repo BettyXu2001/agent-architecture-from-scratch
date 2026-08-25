@@ -1,5 +1,6 @@
 ---
 id: cx04-isolation
+slug: zh/04-context/cx04-isolation
 order: 504
 section: context
 status: planned

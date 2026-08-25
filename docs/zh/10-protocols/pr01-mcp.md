@@ -1,5 +1,6 @@
 ---
 id: pr01-mcp
+slug: zh/10-protocols/pr01-mcp
 order: 1101
 section: protocols
 status: planned

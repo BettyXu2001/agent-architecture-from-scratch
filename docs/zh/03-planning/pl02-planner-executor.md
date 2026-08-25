@@ -1,5 +1,6 @@
 ---
 id: pl02-planner-executor
+slug: zh/03-planning/pl02-planner-executor
 order: 402
 section: planning
 status: planned

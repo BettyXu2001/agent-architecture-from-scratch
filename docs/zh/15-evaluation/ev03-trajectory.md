@@ -1,8 +1,13 @@
 ---
 id: EV03
-title: Trajectory Evaluation
-lang: zh
+slug: zh/15-evaluation/ev03-trajectory
+order: 1603
+section: evaluation
 status: complete
+title: "Trajectory Evaluation"
+description: "Agent 可能偶然得到正确答案，却调用危险工具、走冗余路径或忽略澄清。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

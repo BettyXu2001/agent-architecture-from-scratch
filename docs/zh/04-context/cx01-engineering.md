@@ -1,5 +1,6 @@
 ---
 id: cx01-engineering
+slug: zh/04-context/cx01-engineering
 order: 501
 section: context
 status: planned

@@ -1,5 +1,6 @@
 ---
 id: cm06-message-state-artifact
+slug: zh/09-communication/cm06-message-state-artifact
 order: 1006
 section: communication
 status: planned

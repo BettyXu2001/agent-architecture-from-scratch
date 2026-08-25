@@ -1,5 +1,6 @@
 ---
 id: mm01-working
+slug: zh/05-memory/mm01-working
 order: 601
 section: memory
 status: planned

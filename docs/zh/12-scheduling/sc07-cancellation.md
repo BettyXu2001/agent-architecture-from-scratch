@@ -1,8 +1,13 @@
 ---
 id: SC07
-title: Cancellation and Dependency Propagation
-lang: zh
+slug: zh/12-scheduling/sc07-cancellation
+order: 1307
+section: scheduling
 status: complete
+title: "Cancellation and Dependency Propagation"
+description: "用户取消上层任务后，下游仍运行会浪费资源或产生副作用；上游失败也应阻断依赖项。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

@@ -1,5 +1,6 @@
 ---
 id: cx03-passing
+slug: zh/04-context/cx03-passing
 order: 503
 section: context
 status: planned

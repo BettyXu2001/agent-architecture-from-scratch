@@ -1,5 +1,6 @@
 ---
 id: hy01-supervisor
+slug: zh/08-hierarchical/hy01-supervisor
 order: 901
 section: hierarchical
 status: planned

@@ -1,8 +1,13 @@
 ---
 id: SC05
-title: Queue and Backpressure
-lang: zh
+slug: zh/12-scheduling/sc05-backpressure
+order: 1305
+section: scheduling
 status: complete
+title: "Queue and Backpressure"
+description: "请求速度超过处理能力时，隐藏排队会让超时与成本失控。"
+updated_at: 2026-08-24
+lang: zh
 module: coordination-scheduling
 prerequisites: [PL04, MA06]
 concepts: [coordination, scheduling, task]

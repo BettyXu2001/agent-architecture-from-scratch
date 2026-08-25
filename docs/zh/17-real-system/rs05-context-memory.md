@@ -1,8 +1,13 @@
 ---
 id: RS05
-title: 版本 5：上下文隔离与分层记忆
-lang: zh
+slug: zh/17-real-system/rs05-context-memory
+order: 1805
+section: real-system
 status: complete
+title: "版本 5：上下文隔离与分层记忆"
+description: "随着计划和工具轨迹增长，模型会被无关内容干扰；重复客户研究又在浪费已验证事实。版本 5 把上下文选择、短期任务状态、长期知识和最终产物分开治理。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [context-isolation,memory,provenance]

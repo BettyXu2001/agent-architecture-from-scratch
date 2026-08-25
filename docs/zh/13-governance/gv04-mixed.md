@@ -1,8 +1,13 @@
 ---
 id: GV04
-title: Mixed-Initiative Collaboration
-lang: zh
+slug: zh/13-governance/gv04-mixed
+order: 1404
+section: governance
 status: complete
+title: "Mixed-Initiative Collaboration"
+description: "纯 Agent 自主或纯人工命令都不适合共同编辑、研究和决策。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

@@ -1,8 +1,13 @@
 ---
 id: RS09
-title: 版本 9：MCP 工具与 A2A 远程 Agent
-lang: zh
+slug: zh/17-real-system/rs09-protocols
+order: 1809
+section: real-system
 status: complete
+title: "版本 9：MCP 工具与 A2A 远程 Agent"
+description: "当数据工具由不同团队维护、某些专家由外部服务提供时，进程内函数和本地子 Agent 不再够用。MCP 统一 Agent 对工具与资源的访问，A2A 统一 Agent 对远程 Agent 任务与产物的协作，两者解决不同边界。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [mcp,a2a,protocols,interop]

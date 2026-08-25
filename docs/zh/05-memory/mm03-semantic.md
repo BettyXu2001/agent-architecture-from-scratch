@@ -1,5 +1,6 @@
 ---
 id: mm03-semantic
+slug: zh/05-memory/mm03-semantic
 order: 603
 section: memory
 status: planned

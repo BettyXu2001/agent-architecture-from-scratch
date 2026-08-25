@@ -1,5 +1,6 @@
 ---
 id: hy02-tree
+slug: zh/08-hierarchical/hy02-tree
 order: 902
 section: hierarchical
 status: planned

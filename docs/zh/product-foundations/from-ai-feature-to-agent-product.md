@@ -1,5 +1,6 @@
 ---
 id: p01-from-ai-feature-to-agent-product
+slug: zh/product-foundations/from-ai-feature-to-agent-product
 order: 20
 section: product-foundations
 status: draft

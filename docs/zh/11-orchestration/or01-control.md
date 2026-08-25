@@ -1,8 +1,13 @@
 ---
 id: OR01
-title: Code-driven vs LLM-driven Orchestration
-lang: zh
+slug: zh/11-orchestration/or01-control
+order: 1201
+section: orchestration
 status: complete
+title: "Code-driven vs LLM-driven Orchestration"
+description: "控制路径需要在可预测与适应性之间分配，而不是全交给代码或模型。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

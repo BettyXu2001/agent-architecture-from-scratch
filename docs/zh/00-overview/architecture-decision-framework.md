@@ -1,5 +1,6 @@
 ---
 id: architecture-decision-framework
+slug: zh/00-overview/architecture-decision-framework
 order: 130
 section: overview
 status: planned

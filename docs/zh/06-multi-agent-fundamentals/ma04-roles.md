@@ -1,5 +1,6 @@
 ---
 id: ma04-roles
+slug: zh/06-multi-agent-fundamentals/ma04-roles
 order: 704
 section: multi-agent-fundamentals
 status: planned

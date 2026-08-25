@@ -1,5 +1,6 @@
 ---
 id: cm03-blackboard
+slug: zh/09-communication/cm03-blackboard
 order: 1003
 section: communication
 status: planned

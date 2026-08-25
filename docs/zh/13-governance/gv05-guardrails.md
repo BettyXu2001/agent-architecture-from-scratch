@@ -1,8 +1,13 @@
 ---
 id: GV05
-title: Guardrails and Policy Layer
-lang: zh
+slug: zh/13-governance/gv05-guardrails
+order: 1405
+section: governance
 status: complete
+title: "Guardrails and Policy Layer"
+description: "Prompt 规则会被上下文干扰，且无法单独承担组织政策与副作用控制。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

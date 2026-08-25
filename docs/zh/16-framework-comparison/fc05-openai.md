@@ -1,8 +1,13 @@
 ---
 id: FC05
-title: OpenAI Agents SDK：轻量 Agent、工具与 Handoff
-lang: zh
+slug: zh/16-framework-comparison/fc05-openai
+order: 1705
+section: framework-comparison
 status: complete
+title: "OpenAI Agents SDK：轻量 Agent、工具与 Handoff"
+description: "OpenAI Agents SDK 以 Agent、tools、handoffs、guardrails、sessions 和 tracing 为核心。它不强迫使用图；团队可以让代码决定编排，也可让模型在工具调用和 Handoff 中决定下一步。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [openai-agents-sdk,handoff,agents-as-tools,guardrails]

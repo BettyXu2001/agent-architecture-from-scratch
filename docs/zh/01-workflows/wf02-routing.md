@@ -1,5 +1,6 @@
 ---
 id: wf02-routing
+slug: zh/01-workflows/wf02-routing
 order: 202
 section: workflows
 status: planned

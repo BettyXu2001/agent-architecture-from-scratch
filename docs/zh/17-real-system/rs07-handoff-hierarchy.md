@@ -1,8 +1,13 @@
 ---
 id: RS07
-title: 版本 7：Handoff 与层级团队
-lang: zh
+slug: zh/17-real-system/rs07-handoff-hierarchy
+order: 1807
+section: real-system
 status: complete
+title: "版本 7：Handoff 与层级团队"
+description: "有些任务不是“主 Agent 调专家再回答”，而是用户需要与合规或行业专家持续澄清；同时专家数量增加后，单一 Supervisor 成为瓶颈。Handoff 解决会话所有权转移，层级团队解决管理跨度。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [handoff,hierarchical-team,ownership]

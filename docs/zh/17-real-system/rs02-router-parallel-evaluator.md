@@ -1,8 +1,13 @@
 ---
 id: RS02
-title: 版本 2：Router、Parallel 与 Evaluator
-lang: zh
+slug: zh/17-real-system/rs02-router-parallel-evaluator
+order: 1802
+section: real-system
 status: complete
+title: "版本 2：Router、Parallel 与 Evaluator"
+description: "基线暴露三个瓶颈：不同报告类型需要不同模板，独立来源串行检索太慢，草稿质量只能人工发现。Router、Parallel 和 Evaluator 分别解决适配、时延和质量反馈，不需要开放式 Agent 循环。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [router,parallel,evaluator-optimizer]

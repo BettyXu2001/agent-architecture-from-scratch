@@ -1,8 +1,13 @@
 ---
 id: RS03
-title: 版本 3：在受限范围内引入 ReAct Agent
-lang: zh
+slug: zh/17-real-system/rs03-react
+order: 1803
+section: real-system
 status: complete
+title: "版本 3：在受限范围内引入 ReAct Agent"
+description: "部分研究问题需要根据刚发现的信息继续选择查询、打开文件或补证据，固定检索分支会不断膨胀。版本 3 只把“探索研究”阶段替换为一个 ReAct Agent，其余流程、质量门和发布仍保持确定性。"
+updated_at: 2026-08-25
+lang: zh
 module: 17-real-system
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [react,single-agent,tools,termination]

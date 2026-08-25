@@ -1,8 +1,13 @@
 ---
 id: GV03
-title: Human Handoff and Escalation
-lang: zh
+slug: zh/13-governance/gv03-handoff
+order: 1403
+section: governance
 status: complete
+title: "Human Handoff and Escalation"
+description: "Agent 无法继续、用户要求人工或风险超界时，需要带上下文转给人，而不是让用户重述。"
+updated_at: 2026-08-24
+lang: zh
 module: human-governance
 prerequisites: [OR04, SA05]
 concepts: [human-in-the-loop, governance, policy]

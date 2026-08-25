@@ -1,5 +1,6 @@
 ---
 id: cm07-topology
+slug: zh/09-communication/cm07-topology
 order: 1007
 section: communication
 status: planned

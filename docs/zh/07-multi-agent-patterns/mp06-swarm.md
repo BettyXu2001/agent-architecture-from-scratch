@@ -1,5 +1,6 @@
 ---
 id: mp06-swarm
+slug: zh/07-multi-agent-patterns/mp06-swarm
 order: 806
 section: multi-agent-patterns
 status: planned

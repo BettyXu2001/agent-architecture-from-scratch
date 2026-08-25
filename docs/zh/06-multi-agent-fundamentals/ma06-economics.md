@@ -1,5 +1,6 @@
 ---
 id: ma06-economics
+slug: zh/06-multi-agent-fundamentals/ma06-economics
 order: 706
 section: multi-agent-fundamentals
 status: planned

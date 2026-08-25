@@ -1,5 +1,6 @@
 ---
 id: hy03-teams
+slug: zh/08-hierarchical/hy03-teams
 order: 903
 section: hierarchical
 status: planned

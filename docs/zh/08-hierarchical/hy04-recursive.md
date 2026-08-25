@@ -1,5 +1,6 @@
 ---
 id: hy04-recursive
+slug: zh/08-hierarchical/hy04-recursive
 order: 904
 section: hierarchical
 status: planned

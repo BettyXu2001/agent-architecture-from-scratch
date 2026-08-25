@@ -1,8 +1,13 @@
 ---
 id: EV07
-title: Online Evaluation and Human Feedback
-lang: zh
+slug: zh/15-evaluation/ev07-online
+order: 1607
+section: evaluation
 status: complete
+title: "Online Evaluation and Human Feedback"
+description: "离线集无法覆盖真实分布、供应依赖和用户期望，需要安全地从线上学习。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

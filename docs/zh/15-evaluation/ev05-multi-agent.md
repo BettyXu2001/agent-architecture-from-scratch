@@ -1,8 +1,13 @@
 ---
 id: EV05
-title: Multi-Agent Evaluation
-lang: zh
+slug: zh/15-evaluation/ev05-multi-agent
+order: 1605
+section: evaluation
 status: complete
+title: "Multi-Agent Evaluation"
+description: "最终输出无法说明 Specialist 是否有贡献、协调是否浪费或错误如何级联。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

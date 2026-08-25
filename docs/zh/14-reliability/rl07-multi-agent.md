@@ -1,8 +1,13 @@
 ---
 id: RL07
-title: Multi-Agent Failure Modes
-lang: zh
+slug: zh/14-reliability/rl07-multi-agent
+order: 1507
+section: reliability
 status: complete
+title: "Multi-Agent Failure Modes"
+description: "多个 Agent 新增角色漂移、错误委派、上下文丢失、冲突、群体偏差、级联错误和通信爆炸。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

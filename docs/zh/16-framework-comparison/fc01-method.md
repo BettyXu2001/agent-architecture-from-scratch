@@ -1,8 +1,13 @@
 ---
 id: FC01
-title: 如何公平比较 Agent 框架
-lang: zh
+slug: zh/16-framework-comparison/fc01-method
+order: 1701
+section: framework-comparison
 status: complete
+title: "如何公平比较 Agent 框架"
+description: "框架选择首先是架构选择。相同的“支持多 Agent”，可能分别意味着图节点、角色团队、工具调用或控制权移交，产品的可控性与故障形态完全不同。"
+updated_at: 2026-08-25
+lang: zh
 module: 16-framework-comparison
 prerequisites: [Part 0, Part 6, Part 11]
 concepts: [comparison,architecture,product]

@@ -1,8 +1,13 @@
 ---
 id: RL06
-title: Partial Failure and Compensation
-lang: zh
+slug: zh/14-reliability/rl06-partial
+order: 1506
+section: reliability
 status: complete
+title: "Partial Failure and Compensation"
+description: "并行或多 Agent 系统中部分成功是常态，整单回滚常不可行。"
+updated_at: 2026-08-24
+lang: zh
 module: reliability
 prerequisites: [OR07, SC07]
 concepts: [reliability, failure, recovery]

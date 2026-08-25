@@ -1,5 +1,6 @@
 ---
 id: cm05-private
+slug: zh/09-communication/cm05-private
 order: 1005
 section: communication
 status: planned

@@ -1,8 +1,13 @@
 ---
 id: EV06
-title: Offline Evals and Golden Set
-lang: zh
+slug: zh/15-evaluation/ev06-offline
+order: 1606
+section: evaluation
 status: complete
+title: "Offline Evals and Golden Set"
+description: "上线前需要可重复比较 Prompt、模型与架构，但随机 Demo 不能发现回归。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]

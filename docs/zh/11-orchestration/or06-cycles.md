@@ -1,8 +1,13 @@
 ---
 id: OR06
-title: GraphFlow and Cyclic Workflows
-lang: zh
+slug: zh/11-orchestration/or06-cycles
+order: 1206
+section: orchestration
 status: complete
+title: "GraphFlow and Cyclic Workflows"
+description: "评审、重规划和对话需要受控回边，但普通 Workflow 的循环常隐藏在代码中。"
+updated_at: 2026-08-24
+lang: zh
 module: orchestration
 prerequisites: [PL06, CM04]
 concepts: [orchestration, graph, state]

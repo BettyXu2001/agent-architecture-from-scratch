@@ -1,8 +1,13 @@
 ---
 id: EV08
-title: Cost、Latency and Quality Attribution
-lang: zh
+slug: zh/15-evaluation/ev08-attribution
+order: 1608
+section: evaluation
 status: complete
+title: "Cost、Latency and Quality Attribution"
+description: "总平均成本无法解释哪个角色、步骤或重试值得，质量提升也可能被失败任务成本掩盖。"
+updated_at: 2026-08-24
+lang: zh
 module: evaluation-observability
 prerequisites: [RL01]
 concepts: [evaluation, observability, trace]
